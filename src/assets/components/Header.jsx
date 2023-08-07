@@ -1,16 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/Header.css";
+import Sidebar from "./Sidebar";
 
 export default function Header() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+    console.log("clicked");
+  };
+
   return (
     <>
-      <header id="header" className="header fixed-top d-flex align-items-center">
+      <header
+        id="header"
+        className={`header fixed-top d-flex align-items-center ${
+          sidebarOpen ? "sidebar-open" : ""
+        }`}
+      >
         <div className="d-flex align-items-center justify-content-between">
           <a href="#" className="logo d-flex align-items-center">
-            <img src="https://heeranew.netlify.app/assets/img/logo.jpg" alt="" />
+            <img
+              src="https://heeranew.netlify.app/assets/img/logo.jpg"
+              alt=""
+            />
             <span className="d-none d-lg-block">GMM Admin</span>
           </a>
-          <i className="bx bx-grid-alt toggle-sidebar-btn"></i>
+          <i
+            className="bx bx-grid-alt toggle-sidebar-btn"
+            onClick={toggleSidebar}
+          ></i>
         </div>
 
         <nav className="header-nav ms-auto">
@@ -37,7 +56,7 @@ export default function Header() {
                     className="dropdown-item d-flex align-items-center"
                     href="users-profile.html"
                   >
-                    <i className='bx bxs-cog'></i>
+                    <i className="bx bxs-cog"></i>
                     <span>Account Settings</span>
                   </a>
                 </li>
@@ -46,8 +65,11 @@ export default function Header() {
                 </li>
 
                 <li>
-                  <a className="dropdown-item d-flex align-items-center" href="#">
-                    <i className='bx bx-right-arrow-alt'></i>
+                  <a
+                    className="dropdown-item d-flex align-items-center"
+                    href="#"
+                  >
+                    <i className="bx bx-right-arrow-alt"></i>
                     <span>Sign Out</span>
                   </a>
                 </li>
@@ -56,6 +78,8 @@ export default function Header() {
           </ul>
         </nav>
       </header>
+
+      <Sidebar isOpen={sidebarOpen} />
     </>
   );
 }
