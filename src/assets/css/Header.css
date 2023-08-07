@@ -12,14 +12,15 @@
   }
   
   .logo img {
-    max-height: 70px;
-    max-width: 75px;
-    margin-right: 6px;
+   height: 70px;
+   width: 75px !important;
+    
   }
   
   .logo span {
     font-size: 26px;
     font-weight: 700;
+    margin-left: 6px;
     color: crimson !important;
   }
   
