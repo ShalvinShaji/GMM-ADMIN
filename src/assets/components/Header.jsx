@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../css/Header.css";
 import Sidebar from "./Sidebar";
 
@@ -10,6 +11,10 @@ export default function Header() {
     console.log("clicked");
   };
 
+  const closeSidebar = () => {
+    setSidebarOpen(false);
+  };
+
   return (
     <>
       <header
@@ -19,15 +24,15 @@ export default function Header() {
         }`}
       >
         <div className="d-flex align-items-center justify-content-between">
-          <a href="#" className="logo d-flex align-items-center">
+          <Link to="/" className="logo d-flex align-items-center ">
             <img
               src="https://heeranew.netlify.app/assets/img/logo.jpg"
               alt=""
             />
             <span className="d-none d-lg-block">GMM Admin</span>
-          </a>
+          </Link>
           <i
-            className="bx bx-grid-alt toggle-sidebar-btn"
+            className="bx bx-list-ul toggle-sidebar-btn"
             onClick={toggleSidebar}
           ></i>
         </div>
@@ -41,7 +46,7 @@ export default function Header() {
                 data-bs-toggle="dropdown"
               >
                 <img
-                  src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-0.png"
+                  src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-4.png"
                   alt="Profile"
                   className="rounded-circle"
                 />
@@ -79,7 +84,7 @@ export default function Header() {
         </nav>
       </header>
 
-      <Sidebar isOpen={sidebarOpen} />
+      <Sidebar isOpen={sidebarOpen} closeSidebar={closeSidebar} />
     </>
   );
 }
