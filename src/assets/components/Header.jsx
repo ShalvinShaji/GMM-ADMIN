@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../css/Header.css";
 import Sidebar from "./Sidebar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBarsStaggered, faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -31,10 +33,12 @@ export default function Header() {
             />
             <span className="d-none d-lg-block">GMM Admin</span>
           </Link>
-          <i
-            className="bx bx-list-ul toggle-sidebar-btn"
+
+          <FontAwesomeIcon
+            icon={sidebarOpen ? faBarsStaggered : faBars}
+            className={`toggle-sidebar-btn ${sidebarOpen ? "open" : ""}`}
             onClick={toggleSidebar}
-          ></i>
+          />
         </div>
 
         <nav className="header-nav ms-auto">

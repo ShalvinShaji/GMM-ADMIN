@@ -26,22 +26,28 @@
 .header {
   transition: all 0.5s;
   position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 997;
   height: 80px;
   box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
   background-color: #fff;
   padding-left: 20px;
-  /* Toggle Sidebar Button */
-  /* Search Bar */
 }
 
 .header .toggle-sidebar-btn {
-  font-size: 32px;
+  font-size: 24px;
   padding-left: 10px;
   cursor: pointer;
   color: #0b172b;
+  transition: transform 0.3s ease-in-out;
 }
 
+.toggle-sidebar-btn.open {
+  transition: transform 0.3s ease-in-out;
+}
 /*--------------------------------------------------------------
   # Header Nav
   --------------------------------------------------------------*/
