@@ -1,7 +1,3 @@
-.carousel-image-box {
-  padding: 20px;
-}
-
 .carousel-image-box img {
   width: 350px;
   height: 250px;
@@ -17,4 +13,16 @@
 .carousel-image-delete:hover,
 .carousel-image-delete:active {
   background-color: crimson !important;
+}
+@media only screen and (max-width: 990px) and (min-width: 600px) {
+  .carousel-image-box img {
+    width: 300px;
+    height: 210px;
+  }
+}
+@media only screen and (max-width: 760px) and (min-width: 576px) {
+  .carousel-image-box img {
+    width: 200px;
+    height: 150px;
+  }
 }

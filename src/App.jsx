@@ -2,6 +2,7 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import Scrolltop from "./assets/components/Scrolltop";
 import Header from "./assets/components/Header";
 import Home from "./assets/pages/Home";
 import Departments from "./assets/pages/Departments";
@@ -16,6 +17,7 @@ import RecentNews from "./assets/pages/RecentNews";
 function App() {
   return (
     <>
+      <Scrolltop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
