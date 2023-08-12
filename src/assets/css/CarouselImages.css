@@ -9,6 +9,7 @@
   background-color: #0f0f3e;
   border-radius: 5px;
   border: none;
+  font-size: 14px;
 }
 .carousel-image-delete:hover,
 .carousel-image-delete:active {

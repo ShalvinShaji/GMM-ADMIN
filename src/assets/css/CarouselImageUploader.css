@@ -1,3 +1,36 @@
 .carousel-image-upload {
-  width: 150px;
+  width: 150px !important;
+}
+
+.Image-select-upload-buttons input {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+}
+
+.Image-select-upload-buttons label {
+  color: aliceblue;
+  border-radius: 5px;
+  left: 50%;
+  cursor: pointer;
+}
+
+.carousel-image-upload,
+.carousel-image-select {
+  background-color: #747474;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+}
+
+.carousel-image-upload:hover,
+.carousel-image-select:hover,
+.carousel-image-upload:active,
+.carousel-image-select:active {
+  background-color: #030331 !important;
+}
+
+.display-image {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
