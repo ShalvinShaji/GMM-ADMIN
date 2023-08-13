@@ -103,7 +103,7 @@ const Facilities = () => {
                 </div>
               </div>
 
-              <div className="col-md-6 col-lg-4 col-xl-3 mb-4 d-flex flex-column justify-content-center align-items-center p-2  NewFacilityAdder">
+              <div className="col-md-6 col-lg-4 col-xl-3 mb-4  p-2  ">
                 <NewFacilityAdder />
               </div>
             </div>

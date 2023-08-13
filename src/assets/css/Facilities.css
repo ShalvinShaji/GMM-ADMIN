@@ -32,3 +32,59 @@
 .facility-delete:active {
   background-color: crimson !important;
 }
+
+/* //////////////////// */
+
+.facility-image-upload {
+  width: 150px !important;
+}
+
+.facility-image-select {
+  height: 30px;
+}
+.facility-image-select input {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+}
+
+.facility-image-select label {
+  color: aliceblue;
+  border-radius: 5px;
+  left: 50%;
+  cursor: pointer;
+}
+
+.facility-image-upload,
+.facility-image-select {
+  background-color: #747474;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+}
+
+.facility-image-upload:hover,
+.facility-image-select:hover,
+.facility-image-upload:active,
+.facility-image-select:active {
+  background-color: #030331 !important;
+}
+
+.display-facility-image {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.facility-add-name {
+  font-size: 12px;
+}
+.facility-add-name input {
+  width: 200px;
+  height: 30px;
+  transition: 0.3s !important;
+  outline: none;
+  border: 1px solid #a4a4a4 !important;
+}
+.facility-add-name input:focus {
+  border: 1px solid #030331 !important;
+}
