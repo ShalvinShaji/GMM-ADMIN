@@ -35,13 +35,6 @@
   background-color: #e1adbd;
 }
 
-@media (min-width: 1200px) {
-  #main,
-  #footer {
-    margin-left: 300px;
-  }
-}
-
 @media (max-width: 1199px) {
   .toggle-sidebar .sidebar {
     left: 0;

@@ -13,6 +13,7 @@ import Doctors from "./assets/pages/Doctors";
 import Gallery from "./assets/pages/Gallery";
 import GoverningBoard from "./assets/pages/GoverningBoard";
 import RecentNews from "./assets/pages/RecentNews";
+import Footer from "./assets/components/Footer";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/Governing-Board" element={<GoverningBoard />} />
         <Route path="/Recent-news" element={<RecentNews />} />
       </Routes>
+      <Footer />
     </>
   );
 }
