@@ -89,3 +89,10 @@ a:focus,
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
+
+/* SECTION GENARAL */
+
+section {
+  padding: 30px 0;
+  overflow: hidden;
+}
