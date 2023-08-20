@@ -30,6 +30,7 @@ function App() {
         <Route path="/Gallery" element={<Gallery />} />
         <Route path="/Governing-Board" element={<GoverningBoard />} />
         <Route path="/Recent-news" element={<RecentNews />} />
+        <Route component={<Home />} />
       </Routes>
       <Footer />
     </>
