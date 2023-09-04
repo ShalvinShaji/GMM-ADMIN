@@ -83,6 +83,8 @@ const NewNewsItemAdder = () => {
               rows={10}
               className="news-descrption-text-area no-border"
               placeholder="Enter the news description here..."
+              value={NewsDescription}
+              onChange={handleNewsDescriptionChange}
             />
           </Form.Group>
         </Form>
