@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage, faCloudArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 const NewFacilityAdder = () => {
+  const imageInput = useRef(null);
   const [imageUrl, setImageUrl] = useState(
     "https://st3.depositphotos.com/23594922/31822/v/450/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg"
   ); // Set the initial sample image URL
@@ -46,19 +47,23 @@ const NewFacilityAdder = () => {
             <img
               src={imageUrl}
               alt="Uploaded"
-              className="display-facility-image p-0 me-2 "
+              className="display-facility-image me-2 "
             />
           )}
           <Button
-            variant="primary"
-            className="mt-1 file-input facility-image-select"
+            onClick={() => imageInput.current.click()}
+            className="image-select-delete-btn mt-3 mb-3"
           >
-            <input type="file" id="file" onChange={handleFileChange} />
-            <label htmlFor="file" className="file">
-              <FontAwesomeIcon icon={faImage} className="me-2" />
-              <span>Select Image</span>
-            </label>
+            <span>Select Logo</span>
+            <FontAwesomeIcon icon={faImage} className="ms-2" />
           </Button>
+
+          <input
+            ref={imageInput}
+            type="file"
+            className="image-input-selecter hidden"
+            onChange={handleFileChange}
+          />
         </div>
 
         <div className="facility-add-name mt-1">
@@ -75,11 +80,11 @@ const NewFacilityAdder = () => {
 
         <Button
           variant="primary"
-          className="mt-1 facility-image-upload"
+          className="image-select-delete-btn mt-3 mb-3"
           onClick={handleSaveFacility}
         >
-          <FontAwesomeIcon icon={faCloudArrowUp} className="me-2" />
           <span>Save Facility</span>
+          <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
         </Button>
       </div>
     </>

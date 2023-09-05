@@ -18,95 +18,26 @@ const Gallery = () => {
         <div className="container">
           <div className="image-box">
             <div className="gallery-title">
-              <h4 className="text-center">Gallery album name</h4>
+              <h4 className="text-start">Gallery album name</h4>
             </div>
             <div className="row">
-              <div className="col-md-6  col-xl-4  mb-4 d-flex flex-column justify-content-center align-items-center">
+              <div className="img-box col-md-6  col-xl-4  mb-4 d-flex flex-column justify-content-center align-items-center">
                 <img
                   src="https://images.hdqwalls.com/wallpapers/lionel-messi-and-cristiano-ronaldo-louis-vuitton-5k-v8.jpg"
                   alt=""
+                  className="img-fluid"
                 />
                 <Button
                   variant="primary"
-                  className="mt-1 gallery-image-delete"
+                  className="image-select-delete-btn mt-3 mb-3"
                   onClick={onDelete}
                 >
-                  <FontAwesomeIcon icon={faTrash} className="me-2" />
                   <span>Delete Image</span>
-                </Button>
-              </div>
-              <div className="col-md-6  col-xl-4  mb-4 d-flex flex-column justify-content-center align-items-center">
-                <img
-                  src="https://images.hdqwalls.com/wallpapers/lionel-messi-and-cristiano-ronaldo-louis-vuitton-5k-v8.jpg"
-                  alt=""
-                />
-                <Button
-                  variant="primary"
-                  className="mt-1 gallery-image-delete"
-                  onClick={onDelete}
-                >
-                  <FontAwesomeIcon icon={faTrash} className="me-2" />
-                  <span>Delete Image</span>
-                </Button>
-              </div>
-              <div className="col-md-6  col-xl-4  mb-4 d-flex flex-column justify-content-center align-items-center">
-                <img
-                  src="https://images.hdqwalls.com/wallpapers/lionel-messi-and-cristiano-ronaldo-louis-vuitton-5k-v8.jpg"
-                  alt=""
-                />
-                <Button
-                  variant="primary"
-                  className="mt-1 gallery-image-delete"
-                  onClick={onDelete}
-                >
-                  <FontAwesomeIcon icon={faTrash} className="me-2" />
-                  <span>Delete Image</span>
-                </Button>
-              </div>
-              <div className="col-md-6  col-xl-4  mb-4 d-flex flex-column justify-content-center align-items-center">
-                <img
-                  src="https://images.hdqwalls.com/wallpapers/lionel-messi-and-cristiano-ronaldo-louis-vuitton-5k-v8.jpg"
-                  alt=""
-                />
-                <Button
-                  variant="primary"
-                  className="mt-1 gallery-image-delete"
-                  onClick={onDelete}
-                >
-                  <FontAwesomeIcon icon={faTrash} className="me-2" />
-                  <span>Delete Image</span>
-                </Button>
-              </div>
-              <div className="col-md-6  col-xl-4  mb-4 d-flex flex-column justify-content-center align-items-center">
-                <img
-                  src="https://images.hdqwalls.com/wallpapers/lionel-messi-and-cristiano-ronaldo-louis-vuitton-5k-v8.jpg"
-                  alt=""
-                />
-                <Button
-                  variant="primary"
-                  className="mt-1 gallery-image-delete"
-                  onClick={onDelete}
-                >
-                  <FontAwesomeIcon icon={faTrash} className="me-2" />
-                  <span>Delete Image</span>
-                </Button>
-              </div>
-              <div className="col-md-6  col-xl-4  mb-4 d-flex flex-column justify-content-center align-items-center">
-                <img
-                  src="https://images.hdqwalls.com/wallpapers/lionel-messi-and-cristiano-ronaldo-louis-vuitton-5k-v8.jpg"
-                  alt=""
-                />
-                <Button
-                  variant="primary"
-                  className="mt-1 gallery-image-delete"
-                  onClick={onDelete}
-                >
-                  <FontAwesomeIcon icon={faTrash} className="me-2" />
-                  <span>Delete Image</span>
+                  <FontAwesomeIcon icon={faTrash} className="ms-2" />
                 </Button>
               </div>
 
-              <div className="col-md-6  col-xl-4  mb-4 d-flex flex-column justify-content-center align-items-center p-2  newImageAdder">
+              <div className="col-md-6  col-xl-4  mb-4 d-flex flex-column justify-content-center align-items-center newImageAdder">
                 <NewImageAdder />
               </div>
             </div>

@@ -51,7 +51,7 @@ const NewNewsItemAdder = () => {
         </div>
         <Button
           onClick={() => imageInput.current.click()}
-          className="image-select-btn mt-3 mb-3"
+          className="image-select-delete-btn mt-3 mb-3"
         >
           <span>Select Image</span>
           <FontAwesomeIcon icon={faImage} className="ms-2" />
@@ -89,9 +89,9 @@ const NewNewsItemAdder = () => {
           </Form.Group>
         </Form>
         <div className="save-news-btn d-flex justify-content-center align-items-center">
-          <Button className="save-news">
+          <Button className="image-select-delete-btn">
             <span>Save News</span>
-            <FontAwesomeIcon icon={faCloudArrowUp} className="arrow-icon" />
+            <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
           </Button>
         </div>
       </section>

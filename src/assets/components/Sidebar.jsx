@@ -47,7 +47,7 @@ export default function Sidebar({ isOpen, closeSidebar }) {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/Recent-news" className="nav-link" onClick={closeSidebar}>
+            <Link to="/Recent-News" className="nav-link" onClick={closeSidebar}>
               <FontAwesomeIcon icon={faNewspaper} />
               <span>Recent News</span>
             </Link>

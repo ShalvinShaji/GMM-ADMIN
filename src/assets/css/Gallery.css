@@ -1,8 +1,7 @@
-.image-box img {
-  width: 350px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 5px;
+.img-box img,
+.gallery-display-image img {
+  max-height: 220px !important;
+  width: 400px !important;
 }
 
 .gallery-title h4 {
@@ -12,21 +11,11 @@
   font-weight: 600;
 }
 
-.gallery-image-delete {
-  background-color: #0f0f3e;
-  border-radius: 5px;
-  border: none;
-  font-size: 14px;
-}
-.gallery-image-delete:hover,
-.gallery-image-delete:active {
-  background-color: crimson !important;
-}
-
 .New-Gallery-Item-Adder .gallery-item-name h4 {
   font-size: 20px;
   text-transform: capitalize !important;
   font-weight: 600;
+  text-align: center !important;
 }
 .New-Gallery-Item-Adder .gallery-item-name input {
   outline: none;
@@ -34,6 +23,12 @@
   height: 30px;
   font-size: 12px;
   text-transform: capitalize;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.New-Gallery-Item-Adder .gallery-item-name input:focus {
+  border: 1px solid crimson !important;
 }
 .New-Gallery-Item-Adder {
   height: 250px;

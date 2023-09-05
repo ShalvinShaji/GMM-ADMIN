@@ -4,10 +4,7 @@
 
 .facility {
   border: 1px solid rgba(38, 38, 38, 0.378);
-  padding: var(--mb-2);
   font-size: 14px;
-  margin: 20px 0px;
-  height: auto;
 }
 
 .facility h3 {
@@ -19,55 +16,7 @@
 .facility img {
   width: 80px !important;
   height: 80px !important;
-  padding: 15px;
   filter: saturate(0);
-}
-
-.facility-delete {
-  font-size: 14px;
-  background-color: #0f0f3e;
-  border: none;
-}
-.facility-delete:hover,
-.facility-delete:active {
-  background-color: crimson !important;
-}
-
-/* //////////////////// */
-
-.facility-image-upload {
-  width: 150px !important;
-}
-
-.facility-image-select {
-  height: 30px;
-}
-.facility-image-select input {
-  opacity: 0;
-  width: 0.1px;
-  height: 0.1px;
-}
-
-.facility-image-select label {
-  color: aliceblue;
-  border-radius: 5px;
-  left: 50%;
-  cursor: pointer;
-}
-
-.facility-image-upload,
-.facility-image-select {
-  background-color: #747474;
-  border-radius: 5px;
-  border: none;
-  font-size: 14px;
-}
-
-.facility-image-upload:hover,
-.facility-image-select:hover,
-.facility-image-upload:active,
-.facility-image-select:active {
-  background-color: #030331 !important;
 }
 
 .display-facility-image {

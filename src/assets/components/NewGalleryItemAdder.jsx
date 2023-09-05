@@ -20,7 +20,7 @@ const NewGalleryItemAdder = () => {
   return (
     <div className="New-Gallery-Item-Adder">
       <div className="gallery-item-name">
-        <h4 className="text-center">Create a new album</h4>
+        <h4 className="text-start">Create a new album</h4>
         <input
           type="text"
           placeholder="Enter the album title here.."
@@ -30,11 +30,11 @@ const NewGalleryItemAdder = () => {
       </div>
       <Button
         variant="primary"
-        className="mt-1 carousel-image-upload"
+        className="image-select-delete-btn mt-3 mb-3"
         onClick={createAlbum}
       >
-        <FontAwesomeIcon icon={faCloudArrowUp} className="me-2" />
         <span>Save Album</span>
+        <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
       </Button>
     </div>
   );

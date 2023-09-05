@@ -35,17 +35,14 @@
 .post-readmore:active {
   background-color: #fa1845 !important;
 } */
-.post-readmore span {
-  margin-right: 10px;
-}
 
-.post-readmore .arrow-icon {
+.image-select-delete-btn .arrow-icon {
   position: relative;
   top: 1px;
   transition-duration: 0.4s;
 }
 
-.post-readmore:hover .arrow-icon {
+.image-select-delete-btn:hover .arrow-icon {
   transform: translateX(3px);
 }
 
@@ -85,15 +82,4 @@
   border: 1px solid crimson;
   background: none !important;
   box-shadow: none !important;
-}
-.save-news {
-  height: 70px;
-  width: 300px;
-  font-size: 18px;
-  background-color: crimson;
-  border: none;
-  transition-duration: 0.4s;
-}
-.save-news span {
-  margin-right: 10px;
 }

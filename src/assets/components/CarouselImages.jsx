@@ -23,17 +23,17 @@ const CarouselImages = () => {
                   src="https://images.hdqwalls.com/wallpapers/thumb/antman-8k-qm.jpg"
                   alt=""
                 />
+
                 <Button
-                  variant="primary"
-                  className="mt-1 carousel-image-delete"
                   onClick={onDelete}
+                  className="image-select-delete-btn mt-3 mb-3"
                 >
-                  <FontAwesomeIcon icon={faTrash} className="me-2" />
                   <span>Delete Image</span>
+                  <FontAwesomeIcon icon={faTrash} className="ms-2" />
                 </Button>
               </div>
 
-              <div className="col-sm-6  col-xl-4  mb-4 d-flex flex-column justify-content-center align-items-center p-2  CarouselImageUploader">
+              <div className="col-sm-6  col-xl-4  mb-4 d-flex flex-column justify-content-center align-items-center  ">
                 <CarouselImageUploader />
               </div>
             </div>
