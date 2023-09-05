@@ -22,6 +22,7 @@ const CarouselImages = () => {
                 <img
                   src="https://images.hdqwalls.com/wallpapers/thumb/antman-8k-qm.jpg"
                   alt=""
+                  className="img-fluid"
                 />
 
                 <Button

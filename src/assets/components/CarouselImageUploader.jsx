@@ -35,7 +35,11 @@ const CarouselImageUploader = () => {
     <>
       <div className="file-input  d-flex flex-column ">
         {imageUrl && (
-          <img src={imageUrl} alt="Uploaded" className="display-image" />
+          <img
+            src={imageUrl}
+            alt="Uploaded"
+            className="display-image img-fluid"
+          />
         )}
         <div className="Image-select-upload-buttons d-flex justify-content-around align-items-center">
           <Button

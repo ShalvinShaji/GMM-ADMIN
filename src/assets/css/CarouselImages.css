@@ -1,29 +1,8 @@
 .carousel-image-box img {
-  width: 350px;
+  max-width: 450px;
+  width: 400px;
   height: 250px;
+  max-height: 250px;
   object-fit: cover;
   border-radius: 5px;
-}
-
-.carousel-image-delete {
-  background-color: #0f0f3e;
-  border-radius: 5px;
-  border: none;
-  font-size: 14px;
-}
-.carousel-image-delete:hover,
-.carousel-image-delete:active {
-  background-color: crimson !important;
-}
-@media only screen and (max-width: 990px) and (min-width: 600px) {
-  .carousel-image-box img {
-    width: 300px;
-    height: 210px;
-  }
-}
-@media only screen and (max-width: 760px) and (min-width: 576px) {
-  .carousel-image-box img {
-    width: 200px;
-    height: 150px;
-  }
 }
