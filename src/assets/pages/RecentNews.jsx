@@ -3,7 +3,7 @@ import "../css/RecentNews.css";
 import Sectionhead from "../components/Sectionhead";
 import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faTrash } from "@fortawesome/free-solid-svg-icons";
 import NewNewsItemAdder from "../components/NewNewsItemAdder";
 
 const RecentNews = () => {
@@ -40,6 +40,12 @@ const RecentNews = () => {
                   icon={faArrowRight}
                   className="arrow-icon ms-2"
                 />
+              </Button>
+            </div>
+            <div className="post-delete d-flex justify-content-center align-items-center mt-2 mb-2">
+              <Button variant="primary" className="image-select-delete-btn">
+                <span>Delete Post</span>
+                <FontAwesomeIcon icon={faTrash} className="ms-2" />
               </Button>
             </div>
           </div>

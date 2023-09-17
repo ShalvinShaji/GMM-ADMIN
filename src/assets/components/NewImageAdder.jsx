@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../css/CarouselImageUploader.css";
+import "../css/CarouselImages.css";
 import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudArrowUp, faImage } from "@fortawesome/free-solid-svg-icons";
