@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import Button from "react-bootstrap/Button";
+import Sectionhead from "../components/Sectionhead";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage, faCloudArrowUp } from "@fortawesome/free-solid-svg-icons";
 
@@ -41,52 +42,55 @@ const NewFacilityAdder = () => {
 
   return (
     <>
-      <div className="facility p-2 d-flex flex-column justify-content-center align-items-start ">
-        <div className="facility-add-img border-0 m-0 p-1  d-flex justify-content-around align-items-center">
-          {imageUrl && (
-            <img
-              src={imageUrl}
-              alt="Uploaded"
-              className="display-facility-image me-2 "
+      <section className="NewFacilityAdder">
+        <Sectionhead sectionname="Add Facility" />
+        <div className="facility p-2 d-flex flex-column justify-content-center align-items-start ">
+          <div className="facility-add-img border-0 m-0 p-1  d-flex justify-content-around align-items-center">
+            {imageUrl && (
+              <img
+                src={imageUrl}
+                alt="Uploaded"
+                className="display-facility-image me-2 "
+              />
+            )}
+            <Button
+              onClick={() => imageInput.current.click()}
+              className="image-select-delete-btn mt-3 mb-3"
+            >
+              <span>Select Logo</span>
+              <FontAwesomeIcon icon={faImage} className="ms-2" />
+            </Button>
+
+            <input
+              ref={imageInput}
+              type="file"
+              className="image-input-selecter hidden"
+              onChange={handleFileChange}
             />
-          )}
+          </div>
+
+          <div className="facility-add-name mt-1">
+            <input
+              type="text"
+              name="facility-add-name"
+              id="facility-add-name"
+              placeholder="Enter facility name here."
+              className="p-2"
+              value={facilityName}
+              onChange={handleFacilityNameChange}
+            />
+          </div>
+
           <Button
-            onClick={() => imageInput.current.click()}
+            variant="primary"
             className="image-select-delete-btn mt-3 mb-3"
+            onClick={handleSaveFacility}
           >
-            <span>Select Logo</span>
-            <FontAwesomeIcon icon={faImage} className="ms-2" />
+            <span>Save Facility</span>
+            <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
           </Button>
-
-          <input
-            ref={imageInput}
-            type="file"
-            className="image-input-selecter hidden"
-            onChange={handleFileChange}
-          />
         </div>
-
-        <div className="facility-add-name mt-1">
-          <input
-            type="text"
-            name="facility-add-name"
-            id="facility-add-name"
-            placeholder="Enter facility name here."
-            className="p-2"
-            value={facilityName}
-            onChange={handleFacilityNameChange}
-          />
-        </div>
-
-        <Button
-          variant="primary"
-          className="image-select-delete-btn mt-3 mb-3"
-          onClick={handleSaveFacility}
-        >
-          <span>Save Facility</span>
-          <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
-        </Button>
-      </div>
+      </section>
     </>
   );
 };

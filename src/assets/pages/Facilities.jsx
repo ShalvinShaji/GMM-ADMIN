@@ -17,28 +17,31 @@ const Facilities = () => {
         <Sectionhead sectionname="Facilities" />
         <div className="container">
           <div className="facilities-box">
-            <div className="row ">
-              <div className="col-md-6 col-lg-4 col-xl-3 facility d-flex flex-column justify-content-center align-items-center">
-                <div className="facility-img">
-                  <img
-                    src="https://gmmhospital.in/assets/img/facilities/casualty.png"
-                    alt=""
-                  />
+            <div className="row g-3">
+              <div className="col-md-6 col-lg-4 col-xl-3 ">
+                <div className="facility d-flex flex-column justify-content-center align-items-center">
+                  <div className="facility-img">
+                    <img
+                      src="https://gmmhospital.in/assets/img/facilities/casualty.png"
+                      alt=""
+                    />
+                  </div>
+                  <div className="facility-name">
+                    <h3 className="text-uppercase">casualty</h3>
+                  </div>
+                  <Button
+                    variant="primary"
+                    className="image-select-delete-btn mt-3 mb-3"
+                    onClick={onDelete}
+                  >
+                    <span>Delete Facility</span>
+                    <FontAwesomeIcon icon={faTrash} className="ms-2" />
+                  </Button>
                 </div>
-                <div className="facility-name">
-                  <h3 className="text-uppercase">casualty</h3>
-                </div>
-                <Button
-                  variant="primary"
-                  className="image-select-delete-btn mt-3 mb-3"
-                  onClick={onDelete}
-                >
-                  <span>Save Facility</span>
-                  <FontAwesomeIcon icon={faTrash} className="ms-2" />
-                </Button>
               </div>
-
-              <div className="col-md-6 col-lg-4 col-xl-3">
+            </div>
+            <div className="row d-flex justify-content-center align-items-center">
+              <div className="col-12">
                 <NewFacilityAdder />
               </div>
             </div>
