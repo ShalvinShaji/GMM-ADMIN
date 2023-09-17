@@ -8,7 +8,7 @@ import NewNewsItemAdder from "../components/NewNewsItemAdder";
 
 const RecentNews = () => {
   return (
-    <section className="Recent-News" id="Recent-News">
+    <section className="Recent-News">
       <Sectionhead sectionname="Recent News" />
       <div className="container">
         <div className="row g-2">
