@@ -33,7 +33,7 @@ const RecentNews = () => {
               </p>
             </div>
             <div className="news-details d-flex justify-content-between align-items-center">
-              <p className="post-date text-end m-0">August 29, 2023</p>
+              <p className="post-date text-end m-0">August 2023</p>
               <Button variant="primary" className="image-select-delete-btn">
                 <span>Read more</span>
                 <FontAwesomeIcon

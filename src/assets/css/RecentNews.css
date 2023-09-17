@@ -66,20 +66,24 @@
 }
 
 .add-news-title,
-.add-news-descrption {
+.add-news-descrption,
+.add-news-date {
   font-size: 18px;
   font-weight: 600;
 }
 
 .news-descrption-text-area,
-.news-title-area {
+.news-title-area,
+.news-date-area {
   font-size: 14px;
 }
 
 .news-descrption-text-area:active,
 .news-descrption-text-area:focus,
 .news-title-area:active,
-.news-title-area:focus {
+.news-title-area:focus,
+.news-date-area:active,
+.news-date-area:focus {
   outline: none;
   border: 1px solid crimson;
   background: none !important;
