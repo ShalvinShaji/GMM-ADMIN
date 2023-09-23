@@ -1,0 +1,45 @@
+.department-image img {
+  max-height: 500px !important;
+  width: 100%;
+  object-fit: cover;
+  border: 2px solid #bebbbb;
+}
+.image-select-btn {
+  font-size: 14px;
+  background-color: crimson;
+  border: none;
+  transition-duration: 0.4s;
+}
+
+.image-input-selecter {
+  display: none;
+}
+
+.add-department-title,
+.add-department-descrption,
+.add-department-date {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.department-descrption-text-area,
+.department-title-area,
+.department-date-area {
+  font-size: 14px;
+}
+
+.department-descrption-text-area:active,
+.department-descrption-text-area:focus,
+.department-title-area:active,
+.department-title-area:focus,
+.department-date-area:active,
+.department-date-area:focus {
+  outline: none;
+  border: 1px solid crimson;
+  background: none !important;
+  box-shadow: none !important;
+}
+.current-departments .dep-item {
+  border: 1px solid black;
+  padding: 10px;
+}

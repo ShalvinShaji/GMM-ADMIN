@@ -64,11 +64,6 @@ const CarouselImages = () => {
                 </Button>
               </div>
             </div>
-            <div className="row">
-              <div className="col-12 d-flex flex-column justify-content-center align-items-center  ">
-                <CarouselImageUploader />
-              </div>
-            </div>
           </div>
         </div>
       </section>

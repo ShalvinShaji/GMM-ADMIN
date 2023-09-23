@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudArrowUp, faImage } from "@fortawesome/free-solid-svg-icons";
 
-const CarouselImageUploader = () => {
+const CarouselImageUploader = (props) => {
   const imageInput = useRef(null);
 
   const [imageUrl, setImageUrl] = useState(
@@ -35,38 +35,40 @@ const CarouselImageUploader = () => {
   return (
     <>
       <section className="CarouselImageUploader">
-        <Sectionhead sectionname="Add new carousel image" />
-        <div className="file-input  d-flex flex-column ">
-          {imageUrl && (
-            <img
-              src={imageUrl}
-              alt="Uploaded"
-              className="display-image img-fluid"
-            />
-          )}
-          <div className="Image-select-upload-buttons d-flex justify-content-around align-items-center">
-            <Button
-              onClick={() => imageInput.current.click()}
-              className="image-select-delete-btn mt-3 mb-3"
-            >
-              <span>Select Image</span>
-              <FontAwesomeIcon icon={faImage} className="ms-2" />
-            </Button>
+        <Sectionhead sectionname="Add new Carousel image" />
+        <div className="container">
+          <div className="file-input  d-flex flex-column ">
+            {imageUrl && (
+              <img
+                src={imageUrl}
+                alt="Uploaded"
+                className="display-image img-fluid"
+              />
+            )}
+            <div className="Image-select-upload-buttons d-flex justify-content-around align-items-center">
+              <Button
+                onClick={() => imageInput.current.click()}
+                className="image-select-delete-btn mt-3 mb-3"
+              >
+                <span>Select Image</span>
+                <FontAwesomeIcon icon={faImage} className="ms-2" />
+              </Button>
 
-            <input
-              ref={imageInput}
-              type="file"
-              className="image-input-selecter hidden"
-              onChange={handleFileChange}
-            />
+              <input
+                ref={imageInput}
+                type="file"
+                className="image-input-selecter hidden"
+                onChange={handleFileChange}
+              />
 
-            <Button
-              className="image-select-delete-btn mt-3 mb-3"
-              onClick={uploadImage}
-            >
-              <span>Upload Image</span>
-              <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
-            </Button>
+              <Button
+                className="image-select-delete-btn mt-3 mb-3"
+                onClick={uploadImage}
+              >
+                <span>Upload Image</span>
+                <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
+              </Button>
+            </div>
           </div>
         </div>
       </section>

@@ -8,6 +8,7 @@ import {
   faHouseMedical,
   faImage,
   faNewspaper,
+  faSuitcase,
   faUserDoctor,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -38,6 +39,12 @@ export default function Sidebar({ isOpen, closeSidebar }) {
             <Link to="/Doctors" className="nav-link" onClick={closeSidebar}>
               <FontAwesomeIcon icon={faUserDoctor} />
               <span>Doctors</span>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/Careers" className="nav-link" onClick={closeSidebar}>
+              <FontAwesomeIcon icon={faSuitcase} />
+              <span>Careers</span>
             </Link>
           </li>
           <li className="nav-item">

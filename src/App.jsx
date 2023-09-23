@@ -14,6 +14,7 @@ import Gallery from "./assets/pages/Gallery";
 import GoverningBoard from "./assets/pages/GoverningBoard";
 import RecentNews from "./assets/pages/RecentNews";
 import Footer from "./assets/components/Footer";
+import NewDepartmentAdder from "./assets/components/NewDepartmentAdder";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/Gallery" element={<Gallery />} />
         <Route path="/Governing-Board" element={<GoverningBoard />} />
         <Route path="/Recent-news" element={<RecentNews />} />
+        <Route path="/NewDepartment" element={<NewDepartmentAdder />} />
       </Routes>
       <Footer />
     </>
