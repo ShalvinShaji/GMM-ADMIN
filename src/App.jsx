@@ -15,6 +15,8 @@ import GoverningBoard from "./assets/pages/GoverningBoard";
 import RecentNews from "./assets/pages/RecentNews";
 import Footer from "./assets/components/Footer";
 import NewDepartmentAdder from "./assets/components/NewDepartmentAdder";
+import NewDoctorAdder from "./assets/components/NewDoctorAdder";
+import NewNewsItemAdder from "./assets/components/NewNewsItemAdder";
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
         <Route path="/Governing-Board" element={<GoverningBoard />} />
         <Route path="/Recent-news" element={<RecentNews />} />
         <Route path="/NewDepartment" element={<NewDepartmentAdder />} />
+        <Route path="/NewDoctor" element={<NewDoctorAdder />} />
+        <Route path="/NewNews" element={<NewNewsItemAdder />} />
       </Routes>
       <Footer />
     </>

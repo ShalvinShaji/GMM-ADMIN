@@ -6,9 +6,11 @@ import {
   faImage,
   faCloudArrowUp,
   faTrash,
+  faBuilding,
 } from "@fortawesome/free-solid-svg-icons";
 import Sectionhead from "../components/Sectionhead";
 import "../css/NewDepartment.css";
+import { Link } from "react-router-dom";
 
 const NewDepartmentAdder = () => {
   const imageInput = useRef(null);
@@ -43,6 +45,17 @@ const NewDepartmentAdder = () => {
       <section>
         <Sectionhead sectionname="Delete departments" />
         <div className="container">
+          <div className="d-flex justify-content-end align-items-center mb-4">
+            <Link to="/Departments">
+              <Button className="image-select-delete-btn">
+                <span className="text-white">Back to Departments</span>
+                <FontAwesomeIcon
+                  icon={faBuilding}
+                  className="ms-2 text-white"
+                />
+              </Button>
+            </Link>
+          </div>
           <div className="current-departments ">
             <div className="row ">
               <div className=" col-3 text-center">

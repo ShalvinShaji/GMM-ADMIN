@@ -1,0 +1,67 @@
+/*--------------------------------------------------------------
+# Doctors
+--------------------------------------------------------------*/
+
+.Doctors .member {
+  box-shadow: 0px 2px 15px #211b1cdc !important;
+  padding: 30px;
+  border-radius: 10px;
+  /* margin-bottom: 20px; */
+  transition-duration: 0.3s;
+  color: #2a323f;
+}
+.Doctors .member .pic img {
+  border-radius: 10px !important;
+  width: 180px !important;
+  height: 220px !important;
+  object-fit: cover !important;
+}
+
+.Doctors .member h4 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px !important;
+  margin: 6px 0;
+}
+
+.Doctors .member .doctor-qualification {
+  display: block;
+  font-size: 12px !important;
+  font-weight: 500;
+}
+
+.Doctor-image img {
+  height: 250px;
+  width: 200px;
+  border: 3px solid black;
+  object-fit: contain;
+}
+
+.image-input-selecter {
+  display: none;
+}
+
+.add-Doctor-Name,
+.add-Doctor-Qualification,
+.add-Doctor-Role {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.Doctor-Qualification-area,
+.Doctor-Name-area,
+.Doctor-Role-area {
+  font-size: 14px;
+}
+
+.Doctor-Qualification-area:active,
+.Doctor-Qualification-area:focus,
+.Doctor-Name-area:active,
+.Doctor-Name-area:focus,
+.Doctor-Role-area:active,
+.Doctor-Role-area:focus {
+  outline: none;
+  border: 1px solid crimson;
+  background: none !important;
+  box-shadow: none !important;
+}

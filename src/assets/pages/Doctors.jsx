@@ -1,7 +1,13 @@
 import React from "react";
+import DoctorsViewer from "../components/DoctorsViewer";
+import "../css/Doctors.css";
 
 const Doctors = () => {
-  return <div>Doctors</div>;
+  return (
+    <>
+      <DoctorsViewer />
+    </>
+  );
 };
 
 export default Doctors;

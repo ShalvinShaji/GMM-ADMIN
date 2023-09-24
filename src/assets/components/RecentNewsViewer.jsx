@@ -1,11 +1,24 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faTrash } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRight,
+  faNewspaper,
+  faTrash,
+} from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const RecentNewsViewer = () => {
   return (
     <>
+      <div className="back-to-prev d-flex justify-content-end align-items-start mb-4">
+        <Link to="/NewNews">
+          <Button className="image-select-delete-btn">
+            <span className="text-white">Add News</span>
+            <FontAwesomeIcon icon={faNewspaper} className="ms-2 text-white" />
+          </Button>
+        </Link>
+      </div>
       <div className="row g-2">
         <div className="col-xl-4 col-md-6 post-box p-3">
           <div className="post-img d-flex justify-content-center">

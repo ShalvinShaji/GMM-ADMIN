@@ -1,8 +1,6 @@
 import React from "react";
 import "../css/RecentNews.css";
 import Sectionhead from "../components/Sectionhead";
-
-import NewNewsItemAdder from "../components/NewNewsItemAdder";
 import RecentNewsViewer from "../components/RecentNewsViewer";
 
 const RecentNews = () => {
@@ -11,7 +9,6 @@ const RecentNews = () => {
       <Sectionhead sectionname="Recent News" />
       <div className="container">
         <RecentNewsViewer />
-        <NewNewsItemAdder />
       </div>
     </section>
   );

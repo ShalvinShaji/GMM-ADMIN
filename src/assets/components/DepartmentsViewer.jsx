@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import "../css/Departments.css";
+import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBuilding } from "@fortawesome/free-solid-svg-icons";
+
 const DepartmentsViewer = () => {
   const [activeTab, setActiveTab] = useState("general-medicine");
 
@@ -7,6 +12,17 @@ const DepartmentsViewer = () => {
     <>
       <section id="departments" className="departments">
         <div className="container">
+          <div className="d-flex justify-content-end align-items-center mb-4">
+            <Link to="/NewDepartment">
+              <Button className="image-select-delete-btn">
+                <span className="text-white">Add/Edit departments</span>
+                <FontAwesomeIcon
+                  icon={faBuilding}
+                  className="ms-2 text-white"
+                />
+              </Button>
+            </Link>
+          </div>
           <div className="row">
             <div className="col-lg-3 mb-5 mb-lg-0">
               <ul className="nav nav-tabs flex-column">
