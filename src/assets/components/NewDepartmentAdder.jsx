@@ -43,7 +43,7 @@ const NewDepartmentAdder = () => {
   return (
     <>
       <section>
-        <Sectionhead sectionname="Delete departments" />
+        <Sectionhead sectionname="Delete/Add departments" />
         <div className="container">
           <div className="d-flex justify-content-end align-items-center mb-4">
             <Link to="/Departments">
@@ -58,28 +58,42 @@ const NewDepartmentAdder = () => {
           </div>
           <div className="current-departments ">
             <div className="row ">
-              <div className=" col-3 text-center">
+              <div className=" col-lg-3 col-md-6 col-12 text-center mb-3">
                 <p className="dep-item">dep name</p>
                 <Button className="image-select-delete-btn">
                   <span>Delete department</span>
                   <FontAwesomeIcon icon={faTrash} className="ms-2" />
                 </Button>
               </div>
-              <div className=" col-3 text-center">
+              <div className=" col-lg-3 col-md-6 col-12 text-center mb-3">
                 <p className="dep-item">dep name</p>
                 <Button className="image-select-delete-btn">
                   <span>Delete department</span>
                   <FontAwesomeIcon icon={faTrash} className="ms-2" />
                 </Button>
               </div>
-              <div className=" col-3 text-center">
+              <div className=" col-lg-3 col-md-6 col-12 text-center mb-3">
                 <p className="dep-item">dep name</p>
                 <Button className="image-select-delete-btn">
                   <span>Delete department</span>
                   <FontAwesomeIcon icon={faTrash} className="ms-2" />
                 </Button>
               </div>
-              <div className=" col-3 text-center">
+              <div className=" col-lg-3 col-md-6 col-12 text-center mb-3">
+                <p className="dep-item">dep name</p>
+                <Button className="image-select-delete-btn">
+                  <span>Delete department</span>
+                  <FontAwesomeIcon icon={faTrash} className="ms-2" />
+                </Button>
+              </div>
+              <div className=" col-lg-3 col-md-6 col-12 text-center mb-3">
+                <p className="dep-item">dep name</p>
+                <Button className="image-select-delete-btn">
+                  <span>Delete department</span>
+                  <FontAwesomeIcon icon={faTrash} className="ms-2" />
+                </Button>
+              </div>
+              <div className=" col-lg-3 col-md-6 col-12 text-center mb-3">
                 <p className="dep-item">dep name</p>
                 <Button className="image-select-delete-btn">
                   <span>Delete department</span>
