@@ -4,6 +4,7 @@ import Sectionhead from "../components/Sectionhead";
 import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudArrowUp, faImage } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const CarouselImageUploader = (props) => {
   const imageInput = useRef(null);
@@ -37,6 +38,14 @@ const CarouselImageUploader = (props) => {
       <section className="CarouselImageUploader">
         <Sectionhead sectionname="Add new Carousel image" />
         <div className="container">
+          <div className="back-to-prev d-flex justify-content-end align-items-start mb-4">
+            <Link to="/">
+              <Button className="image-select-delete-btn">
+                <span className="text-white">Back to Carousel Images</span>
+                <FontAwesomeIcon icon={faImage} className="ms-2 text-white" />
+              </Button>
+            </Link>
+          </div>
           <div className="file-input  d-flex flex-column ">
             {imageUrl && (
               <img

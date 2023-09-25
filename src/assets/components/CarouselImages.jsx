@@ -2,9 +2,9 @@ import React from "react";
 import "../css/CarouselImages.css";
 import Button from "react-bootstrap/Button";
 import Sectionhead from "../components/Sectionhead";
-import CarouselImageUploader from "./CarouselImageUploader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faImage, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const CarouselImages = () => {
   const onDelete = () => {
@@ -16,6 +16,14 @@ const CarouselImages = () => {
       <section id="Home-carousel" className="Home-carousel">
         <Sectionhead sectionname="Home Carousel" />
         <div className="container">
+          <div className="back-to-prev d-flex justify-content-end align-items-start mb-4">
+            <Link to="/NewCarouselImage">
+              <Button className="image-select-delete-btn">
+                <span className="text-white">Add New Image</span>
+                <FontAwesomeIcon icon={faImage} className="ms-2 text-white" />
+              </Button>
+            </Link>
+          </div>
           <div className="carousel-image-box">
             <div className="row g-3">
               <div className="  col-md-6 col-xl-4 d-flex flex-column justify-content-center align-items-center">

@@ -17,6 +17,8 @@ import Footer from "./assets/components/Footer";
 import NewDepartmentAdder from "./assets/components/NewDepartmentAdder";
 import NewDoctorAdder from "./assets/components/NewDoctorAdder";
 import NewNewsItemAdder from "./assets/components/NewNewsItemAdder";
+import CarouselImageUploader from "./assets/components/CarouselImageUploader";
+import NewFacilityAdder from "./assets/components/NewFacilityAdder";
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
         <Route path="/NewDepartment" element={<NewDepartmentAdder />} />
         <Route path="/NewDoctor" element={<NewDoctorAdder />} />
         <Route path="/NewNews" element={<NewNewsItemAdder />} />
+        <Route path="/NewCarouselImage" element={<CarouselImageUploader />} />
+        <Route path="/NewFacility" element={<NewFacilityAdder />} />
       </Routes>
       <Footer />
     </>
