@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 const NewDoctorItemAdder = () => {
   const imageInput = useRef(null);
   const [DoctorName, setDoctorName] = useState("");
+  const [selectedDepartment, setselectedDepartment] = useState("option1");
   const [DoctorQualification, setDoctorQualification] = useState("");
   const [DoctorRole, setDoctorRole] = useState("");
   const [imageUrl, setImageUrl] = useState(
@@ -49,6 +50,10 @@ const NewDoctorItemAdder = () => {
   };
   const handleDoctorRole = (event) => {
     setDoctorRole(event.target.value);
+  };
+
+  const handleDepartmentChange = (e) => {
+    setselectedDepartment(e.target.value);
   };
   return (
     <>
@@ -110,11 +115,13 @@ const NewDoctorItemAdder = () => {
                     Select Doctor Department
                   </Form.Label>
                   <div>
-                    <select name="cars" id="cars">
-                      <option value="volvo">Department</option>
-                      <option value="saab">dep 1</option>
-                      <option value="opel">dep 2</option>
-                      <option value="audi">dep 3</option>
+                    <select
+                      value={selectedDepartment}
+                      onChange={handleDepartmentChange}
+                    >
+                      <option value="option1">Option 1</option>
+                      <option value="option2">Option 2</option>
+                      <option value="option3">Option 3</option>
                     </select>
                   </div>
                 </Form.Group>
