@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBuilding } from "@fortawesome/free-solid-svg-icons";
+import Sectionhead from "../components/Sectionhead";
 
 const DepartmentsViewer = () => {
   const [activeTab, setActiveTab] = useState("general-medicine");
@@ -11,6 +12,11 @@ const DepartmentsViewer = () => {
   return (
     <>
       <section id="departments" className="departments">
+        <Sectionhead
+          sectionname="Departments"
+          sectiondescription="Centres Of "
+          sectiondescriptionbold="Excellence"
+        />
         <div className="container">
           <div className="d-flex justify-content-end align-items-center mb-4">
             <Link to="/NewDepartment">

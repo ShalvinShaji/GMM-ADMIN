@@ -1,7 +1,13 @@
 import React from "react";
+import CareersViewer from "../components/CareersViewer";
 
 const Careers = () => {
-  return <div>Careers</div>;
+  return (
+    <>
+      <h2>Careers with GMM</h2>
+      <CareersViewer />
+    </>
+  );
 };
 
 export default Careers;
