@@ -9,6 +9,7 @@ import {
   faNewspaper,
   faSuitcase,
   faUserDoctor,
+  faUserGroup,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Sidebar({ isOpen, closeSidebar }) {
@@ -20,6 +21,16 @@ export default function Sidebar({ isOpen, closeSidebar }) {
             <Link to="/" className=" nav-link" onClick={closeSidebar}>
               <FontAwesomeIcon icon={faDashboard} />
               <span>Dashboard</span>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/Governing-Board"
+              className=" nav-link"
+              onClick={closeSidebar}
+            >
+              <FontAwesomeIcon icon={faUserGroup} />
+              <span>Governing board</span>
             </Link>
           </li>
           <li className="nav-item">
