@@ -97,16 +97,15 @@ const NewFacilityAdder = () => {
                 onChange={handleFacilityNameChange}
               />
             </div>
-
-            <Button
-              variant="primary"
-              className="image-select-delete-btn mt-3 mb-3"
-              onClick={handleSaveFacility}
-            >
-              <span>Save Facility</span>
-              <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
-            </Button>
           </div>
+          <Button
+            variant="primary"
+            className="image-select-delete-btn mt-3 mb-3"
+            onClick={handleSaveFacility}
+          >
+            <span>Save Facility</span>
+            <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
+          </Button>
         </div>
       </section>
     </>
