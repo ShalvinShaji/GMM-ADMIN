@@ -9,7 +9,6 @@ import {
   faBuilding,
 } from "@fortawesome/free-solid-svg-icons";
 import Sectionhead from "../components/Sectionhead";
-import "../css/NewDepartment.css";
 import { Link } from "react-router-dom";
 
 const NewDepartmentAdder = () => {

@@ -8,7 +8,6 @@ import {
   faUserDoctor,
 } from "@fortawesome/free-solid-svg-icons";
 import Sectionhead from "../components/Sectionhead";
-import "../css/Doctors.css";
 import { Link } from "react-router-dom";
 
 const NewDoctorItemAdder = () => {

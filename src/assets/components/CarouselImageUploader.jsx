@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import "../css/CarouselImages.css";
 import Sectionhead from "../components/Sectionhead";
 import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

@@ -1,5 +1,4 @@
 import React from "react";
-import "../css/Gallery.css";
 import Sectionhead from "../components/Sectionhead";
 
 import NewGalleryItemAdder from "../components/NewGalleryItemAdder";

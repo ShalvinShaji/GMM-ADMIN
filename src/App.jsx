@@ -19,6 +19,18 @@ import NewDoctorAdder from "./assets/components/NewDoctorAdder";
 import NewNewsItemAdder from "./assets/components/NewNewsItemAdder";
 import CarouselImageUploader from "./assets/components/CarouselImageUploader";
 import NewFacilityAdder from "./assets/components/NewFacilityAdder";
+import NewCareerAdder from "./assets/components/NewCareerAdder";
+import "./assets/css/RecentNews.css";
+import "./assets/css/Gallery.css";
+import "./assets/css/Facilities.css";
+import "./assets/css/Doctors.css";
+import "./assets/css/Sidebar.css";
+import "./assets/css/NewDepartment.css";
+import "./assets/css/Sectionhead.css";
+import "./assets/css/Footer.css";
+import "./assets/css/Header.css";
+import "./assets/css/Departments.css";
+import "./assets/css/Header.css";
 
 function App() {
   return (
@@ -40,6 +52,7 @@ function App() {
         <Route path="/NewNews" element={<NewNewsItemAdder />} />
         <Route path="/NewCarouselImage" element={<CarouselImageUploader />} />
         <Route path="/NewFacility" element={<NewFacilityAdder />} />
+        <Route path="/NewCareer" element={<NewCareerAdder />} />
       </Routes>
       <Footer />
     </>

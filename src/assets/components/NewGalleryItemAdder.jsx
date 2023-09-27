@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../css/Gallery.css";
 import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudArrowUp } from "@fortawesome/free-solid-svg-icons";

@@ -1,5 +1,4 @@
 import React from "react";
-import "../css/Sectionhead.css";
 
 export default function Sectionhead(props) {
   return (
