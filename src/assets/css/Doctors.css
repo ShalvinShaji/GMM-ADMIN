@@ -17,17 +17,16 @@
   object-fit: cover !important;
 }
 
-.Doctors .member h4 {
-  margin: 0;
-  font-weight: 700;
-  font-size: 14px !important;
-  margin: 6px 0;
-}
-
-.Doctors .member .doctor-qualification {
+.Doctors .member {
   display: block;
   font-size: 12px !important;
   font-weight: 500;
+  line-height: 0.9;
+}
+.Doctors .member h4 {
+  font-weight: 700;
+  font-size: 14px !important;
+  margin: 6px 0;
 }
 
 .Doctor-image img {
