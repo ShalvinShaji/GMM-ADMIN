@@ -1,7 +1,12 @@
 import React from "react";
+import GoverningBoardViewer from "../components/GoverningBoardViewer";
 
 const GoverningBoard = () => {
-  return <div>GoverningBoard</div>;
+  return (
+    <>
+      <GoverningBoardViewer />
+    </>
+  );
 };
 
 export default GoverningBoard;

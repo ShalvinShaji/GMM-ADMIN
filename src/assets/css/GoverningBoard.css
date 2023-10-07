@@ -1,0 +1,11 @@
+.governing-board-member {
+  background-color: #e6e9e9a9;
+  border-radius: 10px;
+}
+.governing-board-member-name {
+  font-weight: 650;
+}
+.current-governing-board {
+  font-size: 20px;
+  font-weight: 600;
+}

@@ -21,6 +21,7 @@ import CarouselImageUploader from "./assets/components/CarouselImageUploader";
 import NewFacilityAdder from "./assets/components/NewFacilityAdder";
 import NewCareerAdder from "./assets/components/NewCareerAdder";
 import NewGalleryAlbumAdder from "./assets/components/NewGalleryAlbumAdder";
+import NewGoverningBoardAdder from "./assets/components/NewGoverningBoardAdder";
 import "./assets/css/RecentNews.css";
 import "./assets/css/Gallery.css";
 import "./assets/css/Facilities.css";
@@ -32,6 +33,7 @@ import "./assets/css/Footer.css";
 import "./assets/css/Header.css";
 import "./assets/css/Departments.css";
 import "./assets/css/Header.css";
+import "./assets/css/GoverningBoard.css";
 
 function App() {
   return (
@@ -55,6 +57,10 @@ function App() {
         <Route path="/NewFacility" element={<NewFacilityAdder />} />
         <Route path="/NewCareer" element={<NewCareerAdder />} />
         <Route path="/NewGalleryAlbum" element={<NewGalleryAlbumAdder />} />
+        <Route
+          path="/Edit-Governing-Board"
+          element={<NewGoverningBoardAdder />}
+        />
       </Routes>
       <Footer />
     </>
