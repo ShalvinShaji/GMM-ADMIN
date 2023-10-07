@@ -144,46 +144,84 @@ const DepartmentsViewer = () => {
                   </div>
 
                   <div className="department-doctors d-flex align-items-center justify-content-center justify-content-lg-start row g-2">
-                    <div className="doc col-md-6   d-flex flex-column flex-xl-row align-items-center justify-content-center">
-                      <img
-                        src="https://heronavbar.netlify.app/assets/img/doctors/DrPhiliposejohn.jpeg"
-                        className="img-fluid m-3"
-                        alt=""
-                      />
-                      <div className="doc-info text-center d-flex flex-column  align-items-center justify-content-center m-3">
-                        <h4>Dr N Damodaran</h4>
-                        <h4>(MBBS, MD)</h4>
-                        <span>Chief Physician</span>
-                        <p>OP Timings: Monday- Saturday</p>
-                        <p>6.00 PM- 9.00 PM</p>
+                    <div className="doc col-md-6">
+                      <div className="d-flex flex-column flex-xl-row align-items-center justify-content-center">
+                        <img
+                          src="https://heronavbar.netlify.app/assets/img/doctors/DrPhiliposejohn.jpeg"
+                          className="img-fluid m-3"
+                          alt=""
+                        />
+                        <div className="doc-info text-center d-flex flex-column  align-items-center justify-content-center m-3">
+                          <h4>Dr N Damodaran</h4>
+                          <h4>(MBBS, MD)</h4>
+                          <span>Chief Physician</span>
+                          <p>OP Timings: Monday- Saturday</p>
+                          <p>6.00 PM- 9.00 PM</p>
+                        </div>
                       </div>
                     </div>
-                    <div className="doc col-md-6  d-flex flex-column flex-xl-row align-items-center justify-content-center">
-                      <img
-                        src="https://heronavbar.netlify.app/assets/img/doctors/DrPhiliposejohn.jpeg"
-                        className="img-fluid m-3"
-                        alt=""
-                      />
-                      <div className="doc-info text-center d-flex flex-column  align-items-center justify-content-center m-3">
-                        <h4>Dr N Damodaran</h4>
-                        <h4>(MBBS, MD)</h4>
-                        <span>Chief Physician</span>
-                        <p>OP Timings: Monday- Saturday</p>
-                        <p>6.00 PM- 9.00 PM</p>
+                    <div className="doc col-md-6">
+                      <div className="d-flex flex-column flex-xl-row align-items-center justify-content-center">
+                        <img
+                          src="https://heronavbar.netlify.app/assets/img/doctors/DrPhiliposejohn.jpeg"
+                          className="img-fluid m-3"
+                          alt=""
+                        />
+                        <div className="doc-info text-center d-flex flex-column  align-items-center justify-content-center m-3">
+                          <h4>Dr N Damodaran</h4>
+                          <h4>(MBBS, MD)</h4>
+                          <span>Chief Physician</span>
+                          <p>OP Timings: Monday- Saturday</p>
+                          <p>6.00 PM- 9.00 PM</p>
+                        </div>
                       </div>
                     </div>
-                    <div className="doc col-md-6   d-flex flex-column flex-xl-row align-items-center justify-content-center">
-                      <img
-                        src="https://heronavbar.netlify.app/assets/img/doctors/DrPhiliposejohn.jpeg"
-                        className="img-fluid m-3"
-                        alt=""
-                      />
-                      <div className="doc-info text-center d-flex flex-column  align-items-center justify-content-center m-3">
-                        <h4>Dr N Damodaran</h4>
-                        <h4>(MBBS, MD)</h4>
-                        <span>Chief Physician</span>
-                        <p>OP Timings: Monday- Saturday</p>
-                        <p>6.00 PM- 9.00 PM</p>
+                    <div className="doc col-md-6">
+                      <div className="d-flex flex-column flex-xl-row align-items-center justify-content-center">
+                        <img
+                          src="https://heronavbar.netlify.app/assets/img/doctors/DrPhiliposejohn.jpeg"
+                          className="img-fluid m-3"
+                          alt=""
+                        />
+                        <div className="doc-info text-center d-flex flex-column  align-items-center justify-content-center m-3">
+                          <h4>Dr N Damodaran</h4>
+                          <h4>(MBBS, MD)</h4>
+                          <span>Chief Physician</span>
+                          <p>OP Timings: Monday- Saturday</p>
+                          <p>6.00 PM- 9.00 PM</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="doc col-md-6">
+                      <div className="d-flex flex-column flex-xl-row align-items-center justify-content-center">
+                        <img
+                          src="https://heronavbar.netlify.app/assets/img/doctors/DrPhiliposejohn.jpeg"
+                          className="img-fluid m-3"
+                          alt=""
+                        />
+                        <div className="doc-info text-center d-flex flex-column  align-items-center justify-content-center m-3">
+                          <h4>Dr N Damodaran</h4>
+                          <h4>(MBBS, MD)</h4>
+                          <span>Chief Physician</span>
+                          <p>OP Timings: Monday- Saturday</p>
+                          <p>6.00 PM- 9.00 PM</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="doc col-md-6">
+                      <div className="d-flex flex-column flex-xl-row align-items-center justify-content-center">
+                        <img
+                          src="https://heronavbar.netlify.app/assets/img/doctors/DrPhiliposejohn.jpeg"
+                          className="img-fluid m-3"
+                          alt=""
+                        />
+                        <div className="doc-info text-center d-flex flex-column  align-items-center justify-content-center m-3">
+                          <h4>Dr N Damodaran</h4>
+                          <h4>(MBBS, MD)</h4>
+                          <span>Chief Physician</span>
+                          <p>OP Timings: Monday- Saturday</p>
+                          <p>6.00 PM- 9.00 PM</p>
+                        </div>
                       </div>
                     </div>
                   </div>
