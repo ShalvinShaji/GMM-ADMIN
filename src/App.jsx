@@ -20,6 +20,7 @@ import NewNewsItemAdder from "./assets/components/NewNewsItemAdder";
 import CarouselImageUploader from "./assets/components/CarouselImageUploader";
 import NewFacilityAdder from "./assets/components/NewFacilityAdder";
 import NewCareerAdder from "./assets/components/NewCareerAdder";
+import NewGalleryAlbumAdder from "./assets/components/NewGalleryAlbumAdder";
 import "./assets/css/RecentNews.css";
 import "./assets/css/Gallery.css";
 import "./assets/css/Facilities.css";
@@ -53,6 +54,7 @@ function App() {
         <Route path="/NewCarouselImage" element={<CarouselImageUploader />} />
         <Route path="/NewFacility" element={<NewFacilityAdder />} />
         <Route path="/NewCareer" element={<NewCareerAdder />} />
+        <Route path="/NewGalleryAlbum" element={<NewGalleryAlbumAdder />} />
       </Routes>
       <Footer />
     </>
