@@ -144,8 +144,8 @@ const DepartmentsViewer = () => {
                   </div>
 
                   <div className="row department-doctors g-3">
-                    <div className=" col-md-6">
-                      <div className="doc d-flex flex-column flex-lg-row justify-content-center justify-lg-content-around align-items-center">
+                    <div className=" col-xl-4 col-md-6">
+                      <div className="doc d-flex flex-column  justify-content-center align-items-center">
                         <div className="doc-img p-2">
                           <img
                             src="https://heronavbar.netlify.app/assets/img/doctors/DrPhiliposejohn.jpeg"
@@ -153,7 +153,7 @@ const DepartmentsViewer = () => {
                             alt="image"
                           />
                         </div>
-                        <div className="doc-info text-center d-flex flex-column  align-lg-items-start justify-content-center m-3">
+                        <div className="doc-info text-center d-flex flex-column  align-items-center justify-content-center m-3">
                           <h4>Dr N Damodaran</h4>
                           <span>MBBS, MD</span>
                           <span>Chief Physician</span>
@@ -162,8 +162,8 @@ const DepartmentsViewer = () => {
                         </div>
                       </div>
                     </div>
-                    <div className=" col-md-6">
-                      <div className="doc d-flex flex-column flex-lg-row justify-content-center justify-lg-content-around align-items-center">
+                    <div className=" col-xl-4 col-md-6">
+                      <div className="doc d-flex flex-column  justify-content-center align-items-center">
                         <div className="doc-img p-2">
                           <img
                             src="https://heronavbar.netlify.app/assets/img/doctors/DrPhiliposejohn.jpeg"
@@ -171,7 +171,7 @@ const DepartmentsViewer = () => {
                             alt="image"
                           />
                         </div>
-                        <div className="doc-info text-center d-flex flex-column  align-lg-items-start justify-content-center m-3">
+                        <div className="doc-info text-center d-flex flex-column  align-items-center justify-content-center m-3">
                           <h4>Dr N Damodaran</h4>
                           <span>MBBS, MD</span>
                           <span>Chief Physician</span>
@@ -180,8 +180,8 @@ const DepartmentsViewer = () => {
                         </div>
                       </div>
                     </div>
-                    <div className=" col-md-6">
-                      <div className="doc d-flex flex-column flex-lg-row justify-content-center justify-lg-content-around align-items-center">
+                    <div className=" col-xl-4 col-md-6">
+                      <div className="doc d-flex flex-column  justify-content-center align-items-center">
                         <div className="doc-img p-2">
                           <img
                             src="https://heronavbar.netlify.app/assets/img/doctors/DrPhiliposejohn.jpeg"
@@ -189,61 +189,7 @@ const DepartmentsViewer = () => {
                             alt="image"
                           />
                         </div>
-                        <div className="doc-info text-center d-flex flex-column  align-lg-items-start justify-content-center m-3">
-                          <h4>Dr N Damodaran</h4>
-                          <span>MBBS, MD</span>
-                          <span>Chief Physician</span>
-                          <p>OP Timings: Monday- Saturday</p>
-                          <p>6.00 PM- 9.00 PM</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className=" col-md-6">
-                      <div className="doc d-flex flex-column flex-lg-row justify-content-center justify-lg-content-around align-items-center">
-                        <div className="doc-img p-2">
-                          <img
-                            src="https://heronavbar.netlify.app/assets/img/doctors/DrPhiliposejohn.jpeg"
-                            className="img-fluid"
-                            alt="image"
-                          />
-                        </div>
-                        <div className="doc-info text-center d-flex flex-column  align-lg-items-start justify-content-center m-3">
-                          <h4>Dr N Damodaran</h4>
-                          <span>MBBS, MD</span>
-                          <span>Chief Physician</span>
-                          <p>OP Timings: Monday- Saturday</p>
-                          <p>6.00 PM- 9.00 PM</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className=" col-md-6">
-                      <div className="doc d-flex flex-column flex-lg-row justify-content-center justify-lg-content-around align-items-center">
-                        <div className="doc-img p-2">
-                          <img
-                            src="https://heronavbar.netlify.app/assets/img/doctors/DrPhiliposejohn.jpeg"
-                            className="img-fluid"
-                            alt="image"
-                          />
-                        </div>
-                        <div className="doc-info text-center d-flex flex-column  align-lg-items-start justify-content-center m-3">
-                          <h4>Dr N Damodaran</h4>
-                          <span>MBBS, MD</span>
-                          <span>Chief Physician</span>
-                          <p>OP Timings: Monday- Saturday</p>
-                          <p>6.00 PM- 9.00 PM</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className=" col-md-6">
-                      <div className="doc d-flex flex-column flex-lg-row justify-content-center justify-lg-content-around align-items-center">
-                        <div className="doc-img p-2">
-                          <img
-                            src="https://heronavbar.netlify.app/assets/img/doctors/DrPhiliposejohn.jpeg"
-                            className="img-fluid"
-                            alt="image"
-                          />
-                        </div>
-                        <div className="doc-info text-center d-flex flex-column  align-lg-items-start justify-content-center m-3">
+                        <div className="doc-info text-center d-flex flex-column  align-items-center justify-content-center m-3">
                           <h4>Dr N Damodaran</h4>
                           <span>MBBS, MD</span>
                           <span>Chief Physician</span>
