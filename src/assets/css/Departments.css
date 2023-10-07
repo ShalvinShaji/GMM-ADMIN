@@ -94,13 +94,9 @@
 }
 
 .departments .doc {
-  transition-duration: 0.4s;
+  transition-duration: 1s;
   border-radius: 10px;
   box-shadow: 0px 1px 15px #b3b3b36d;
-  width: 450px;
-  margin: 15px;
-  margin-left: 0 !important;
-  margin-top: 0 !important;
 }
 
 .departments .doc img {
@@ -112,69 +108,22 @@
 }
 
 .departments .doc h4 {
-  margin-bottom: 5px;
+  margin-bottom: 2px;
   font-weight: 700;
   font-size: 14px;
-  /* color: #2c4964; */
 }
 
 .departments .doc span {
   display: block;
   font-size: 14px;
   position: relative;
-  font-weight: 600;
+  font-weight: 500;
   color: #3e3e3e;
 }
 
-.doc-appointment {
-  font-weight: 500;
-  font-size: 14px;
-  padding: 10px 35px;
-  /* border-radius: 25px; */
-  transition: 0.5s;
-  color: white;
-  background-color: crimson;
-}
-
-.doc-appointment:hover {
-  background-color: #db0732;
-  color: white;
-}
-
 .departments .doc p {
-  margin: 10px 0 0 0;
+  margin-top: 3px;
   font-size: 13px;
-}
-
-@media (max-width: 768px) {
-  /* .departments .tab-pane img {
-    float: none;
-    padding: 0 0 15px 0;
-    max-width: 100%;
-  } */
-
-  .departments .tab-pane .department-img img {
-    height: 185px;
-  }
-
-  .departments .doc {
-    display: flex;
-    flex-direction: column !important;
-  }
-
-  .departments .doc-info {
-    margin-bottom: 10px;
-  }
-
-  .doc-appointment {
-    padding: 6px 25px;
-    margin-bottom: 10px;
-  }
-
-  .departments .department-description p {
-    color: #777777;
-    margin-bottom: var(--mb-5);
-  }
 }
 
 /* .departments .tab-pane h3 {
@@ -188,7 +137,7 @@
   color: #3e3e3e;
 }
 
-@keyframes slide-down {
+/* @keyframes slide-down {
   0% {
     opacity: 0;
   }
@@ -196,4 +145,4 @@
   100% {
     opacity: 1;
   }
-}
+} */
