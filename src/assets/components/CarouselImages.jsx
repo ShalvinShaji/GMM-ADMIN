@@ -4,7 +4,7 @@ import Sectionhead from "../components/Sectionhead";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import CustomPopup from "../components/PopUp";
+import CustomPopup from "../components/CustomPopup";
 
 const CarouselImages = () => {
   const [images, setImages] = useState([
@@ -14,16 +14,17 @@ const CarouselImages = () => {
     },
     {
       id: 2,
-      src: "https://images.hdqwalls.com/download/the-chronicles-of-john-wick-8s-1537x722.jpg",
+      src: "https://images.hdqwalls.com/download/2022-the-batman-minimal-5k-1m-1544x724.jpg",
     },
     {
       id: 3,
-      src: "https://images.hdqwalls.com/download/the-chronicles-of-john-wick-8s-1537x722.jpg",
+      src: "https://images.hdqwalls.com/download/the-batman-riddle-5k-js-1544x724.jpg",
     },
   ]);
 
-  const [showPopup, setShowPopup] = useState(false);
   const [selectedImageId, setSelectedImageId] = useState(null);
+
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleDelete = (id) => {
     setSelectedImageId(id);
