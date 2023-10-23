@@ -13,7 +13,9 @@ import CustomPopup from "../components/CustomPopup";
 const FacilitiesViewer = () => {
   const [showDeletePopup, setshowDeletePopup] = useState(false);
   const [selectedFacilityID, setSelectedFacilityID] = useState("");
-  const [facilities, setFacilities] = useState([
+  const [facilities, setFacilities] = useState(initialFacilitiesData);
+
+  const initialFacilitiesData = [
     {
       id: 1,
       name: "Casualty",
@@ -30,7 +32,7 @@ const FacilitiesViewer = () => {
       imageSrc: "https://gmmhospital.in/assets/img/facilities/casualty.png",
     },
     // Add more facilities as needed
-  ]);
+  ];
 
   const handleDeleteFacility = (id) => {
     setSelectedFacilityID(id);

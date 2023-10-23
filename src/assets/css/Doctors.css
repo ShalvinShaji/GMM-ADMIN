@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 
 .Doctors .member {
-  box-shadow: 0px 2px 15px #211b1cdc !important;
+  box-shadow: 0px 2px 15px #d2cfd0dc !important;
   padding: 30px;
   border-radius: 10px;
   /* margin-bottom: 20px; */
@@ -32,7 +32,7 @@
 .Doctor-image img {
   height: 250px;
   width: 200px;
-  border: 3px solid black;
+  border: 1px solid black;
   object-fit: contain;
 }
 
