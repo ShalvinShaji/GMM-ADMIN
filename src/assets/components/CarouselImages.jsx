@@ -1,13 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Sectionhead from "../components/Sectionhead";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import CustomPopup from "../components/PopUp";
 
 const CarouselImages = () => {
-  const onDelete = () => {
-    console.log("image deleted");
+  const [images, setImages] = useState([
+    {
+      id: 1,
+      src: "https://images.hdqwalls.com/download/the-chronicles-of-john-wick-8s-1537x722.jpg",
+    },
+    {
+      id: 2,
+      src: "https://images.hdqwalls.com/download/the-chronicles-of-john-wick-8s-1537x722.jpg",
+    },
+    {
+      id: 3,
+      src: "https://images.hdqwalls.com/download/the-chronicles-of-john-wick-8s-1537x722.jpg",
+    },
+  ]);
+
+  const [showPopup, setShowPopup] = useState(false);
+  const [selectedImageId, setSelectedImageId] = useState(null);
+
+  const handleDelete = (id) => {
+    setSelectedImageId(id);
+    setShowPopup(true);
+  };
+
+  const handleConfirmDelete = () => {
+    const updatedImages = images.filter(
+      (image) => image.id !== selectedImageId
+    );
+    setImages(updatedImages);
+    console.log(`Image with id ${selectedImageId} deleted`);
+    setShowPopup(false);
+  };
+
+  const handlePopupClose = () => {
+    setShowPopup(false);
   };
 
   return (
@@ -25,55 +58,32 @@ const CarouselImages = () => {
           </div>
           <div className="carousel-image-box">
             <div className="row g-3">
-              <div className="  col-md-6 col-xl-4 d-flex flex-column justify-content-center align-items-center">
-                <img
-                  src="https://images.hdqwalls.com/download/the-chronicles-of-john-wick-8s-1537x722.jpg"
-                  alt=""
-                  className="img-fluid"
-                />
-
-                <Button
-                  onClick={onDelete}
-                  className="image-select-delete-btn mt-3 mb-3"
+              {images.map((image) => (
+                <div
+                  key={image.id}
+                  className="col-md-6 col-xl-4 d-flex flex-column justify-content-center align-items-center"
                 >
-                  <span>Delete Image</span>
-                  <FontAwesomeIcon icon={faTrash} className="ms-2" />
-                </Button>
-              </div>
-              <div className="  col-md-6 col-xl-4 d-flex flex-column justify-content-center align-items-center">
-                <img
-                  src="https://images.hdqwalls.com/download/the-chronicles-of-john-wick-8s-1537x722.jpg"
-                  alt=""
-                  className="img-fluid"
-                />
-
-                <Button
-                  onClick={onDelete}
-                  className="image-select-delete-btn mt-3 mb-3"
-                >
-                  <span>Delete Image</span>
-                  <FontAwesomeIcon icon={faTrash} className="ms-2" />
-                </Button>
-              </div>
-              <div className="  col-md-6 col-xl-4 d-flex flex-column justify-content-center align-items-center">
-                <img
-                  src="https://images.hdqwalls.com/download/the-chronicles-of-john-wick-8s-1537x722.jpg"
-                  alt=""
-                  className="img-fluid"
-                />
-
-                <Button
-                  onClick={onDelete}
-                  className="image-select-delete-btn mt-3 mb-3"
-                >
-                  <span>Delete Image</span>
-                  <FontAwesomeIcon icon={faTrash} className="ms-2" />
-                </Button>
-              </div>
+                  <img src={image.src} alt="" className="img-fluid" />
+                  <Button
+                    onClick={() => handleDelete(image.id)}
+                    className="image-select-delete-btn mt-3 mb-3"
+                  >
+                    <span>Delete Image</span>
+                    <FontAwesomeIcon icon={faTrash} className="ms-2" />
+                  </Button>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
+
+      <CustomPopup
+        show={showPopup}
+        onHide={handlePopupClose}
+        onConfirm={handleConfirmDelete}
+        message="Do you really want to delete this image?"
+      />
     </>
   );
 };

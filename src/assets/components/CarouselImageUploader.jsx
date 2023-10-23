@@ -4,38 +4,47 @@ import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudArrowUp, faImage } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import CustomPopup from "../components/PopUp";
 
-const CarouselImageUploader = (props) => {
+const CarouselImageUploader = () => {
+  const [showPopup, setShowPopup] = useState(false);
+  const [imageUrls, setImageUrls] = useState([]);
   const imageInput = useRef(null);
 
-  const [imageUrl, setImageUrl] = useState(
-    "https://images.hdqwalls.com/download/john-wick-chapter-2-2017-ad-1537x722.jpg"
-  );
-
   const handleFileChange = (event) => {
-    const file = event.target.files[0];
+    const files = event.target.files;
 
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        setImageUrl(e.target.result);
-        console.log(file);
-      };
-      reader.readAsDataURL(file);
+    if (files.length > 0) {
+      const newImageUrls = Array.from(files).map((file) =>
+        URL.createObjectURL(file)
+      );
+      setImageUrls((prevImageUrls) => [...prevImageUrls, ...newImageUrls]);
     }
   };
 
-  const uploadImage = (file) => {
-    const formData = new FormData();
-    formData.append("image", file);
-    for (let pair of formData.entries()) {
-      console.log(pair[0] + ": " + pair[1]);
+  const uploadImages = () => {
+    if (imageUrls.length === 0) {
+      alert("Please select at least one image before uploading.");
+    } else {
+      setShowPopup(true);
     }
   };
+
+  const handleConfirmUpload = () => {
+    // Handle the actual upload logic here
+    // For now, just close the popup and clear the selected images
+    setShowPopup(false);
+    setImageUrls([]);
+  };
+
+  const handlePopupClose = () => {
+    setShowPopup(false);
+  };
+
   return (
     <>
       <section className="CarouselImageUploader">
-        <Sectionhead sectionname="Add new Carousel image" />
+        <Sectionhead sectionname="Add new Carousel images" />
         <div className="container">
           <div className="back-to-prev d-flex justify-content-end align-items-start mb-4">
             <Link to="/">
@@ -45,20 +54,21 @@ const CarouselImageUploader = (props) => {
               </Button>
             </Link>
           </div>
-          <div className="file-input  d-flex flex-column ">
-            {imageUrl && (
+          <div className="file-input d-flex flex-column">
+            {imageUrls.map((imageUrl, index) => (
               <img
+                key={index}
                 src={imageUrl}
-                alt="Uploaded"
-                className="display-image img-fluid"
+                alt={`Uploaded ${index + 1}`}
+                className="display-image img-fluid mb-3"
               />
-            )}
+            ))}
             <div className="Image-select-upload-buttons d-flex justify-content-around align-items-center">
               <Button
                 onClick={() => imageInput.current.click()}
                 className="image-select-delete-btn mt-3 mb-3"
               >
-                <span>Select Image</span>
+                <span>Select Images</span>
                 <FontAwesomeIcon icon={faImage} className="ms-2" />
               </Button>
 
@@ -67,19 +77,27 @@ const CarouselImageUploader = (props) => {
                 type="file"
                 className="image-input-selecter hidden"
                 onChange={handleFileChange}
+                multiple
               />
 
               <Button
                 className="image-select-delete-btn mt-3 mb-3"
-                onClick={uploadImage}
+                onClick={uploadImages}
               >
-                <span>Upload Image</span>
+                <span>Upload Images</span>
                 <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
               </Button>
             </div>
           </div>
         </div>
       </section>
+
+      <CustomPopup
+        show={showPopup}
+        onHide={handlePopupClose}
+        onConfirm={handleConfirmUpload}
+        message="Are you sure you want to upload these images?"
+      />
     </>
   );
 };
