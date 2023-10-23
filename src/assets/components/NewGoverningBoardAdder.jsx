@@ -40,11 +40,24 @@ const GoverningBoardViewer = () => {
   };
 
   const saveGoverningBoard = () => {
-    setShowPopup(true);
+    const allFieldsEmpty =
+      patronName === "" &&
+      presidentName === "" &&
+      jointSecretaryName === "" &&
+      secretaryName === "" &&
+      treasurerName === "" &&
+      administratorName === "" &&
+      chiefMedicalOfficerName === "";
+
+    if (allFieldsEmpty) {
+      alert("Please fill in at least one field before saving.");
+    } else {
+      setShowPopup(true);
+    }
   };
 
   const handleConfirmSaveGoverningBoard = () => {
-    const committeeMembers = [
+    const GoverningBoardNames = [
       { role: "Patron", name: patronName },
       { role: "President", name: presidentName },
       { role: "Joint Secretary", name: jointSecretaryName },
@@ -53,7 +66,13 @@ const GoverningBoardViewer = () => {
       { role: "Administrator", name: administratorName },
       { role: "Chief Medical Officer", name: chiefMedicalOfficerName },
     ];
-    console.log(committeeMembers);
+
+    const nonEmptyGoverningBoardNames = GoverningBoardNames.filter(
+      (item) => item.name.trim() !== ""
+    );
+
+    console.log(nonEmptyGoverningBoardNames);
+
     setPatronName("");
     setPresidentName("");
     setJointSecretaryName("");
@@ -237,7 +256,7 @@ const GoverningBoardViewer = () => {
         show={showPopup}
         onHide={handlePopupClose}
         onConfirm={handleConfirmSaveGoverningBoard}
-        message="Do you really want to delete this image?"
+        message="Do you want to save the changes?"
       />
     </>
   );

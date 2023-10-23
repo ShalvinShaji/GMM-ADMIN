@@ -22,10 +22,9 @@ const CarouselImages = () => {
     },
   ]);
 
-  const [selectedImageId, setSelectedImageId] = useState(null);
-
   const [showPopup, setShowPopup] = useState(false);
 
+  const [selectedImageId, setSelectedImageId] = useState(null);
   const handleDelete = (id) => {
     setSelectedImageId(id);
     setShowPopup(true);
