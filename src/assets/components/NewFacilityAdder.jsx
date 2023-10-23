@@ -8,8 +8,10 @@ import {
   faHouseMedical,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import CustomPopup from "../components/CustomPopup";
 
 const NewFacilityAdder = () => {
+  const [showFacilitySavePopup, setShowFacilitySavePopup] = useState(false);
   const imageInput = useRef(null);
   const [imageUrl, setImageUrl] = useState(
     "https://st3.depositphotos.com/23594922/31822/v/450/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg"
@@ -34,15 +36,31 @@ const NewFacilityAdder = () => {
   };
 
   const handleSaveFacility = () => {
-    const facilityData = {
+    if (!facilityName || !imageUrl) {
+      // If any field is empty, show an alert
+      alert("Please fill in all the fields");
+    } else {
+      // If all fields are filled, show the save popup
+      setShowFacilitySavePopup(true);
+    }
+  };
+
+  const handleConfirmSaveFacility = () => {
+    const NewFacilityData = {
       imageUrl: imageUrl,
       facilityName: facilityName,
     };
+    console.log(NewFacilityData);
 
     setFacilityName("");
     setImageUrl(
       "https://st3.depositphotos.com/23594922/31822/v/450/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg"
     );
+    setShowFacilitySavePopup(false);
+  };
+
+  const handleFacilitySavePopupClose = () => {
+    setShowFacilitySavePopup(false);
   };
 
   return (
@@ -108,6 +126,12 @@ const NewFacilityAdder = () => {
           </Button>
         </div>
       </section>
+      <CustomPopup
+        show={showFacilitySavePopup}
+        onHide={handleFacilitySavePopupClose}
+        onConfirm={handleConfirmSaveFacility}
+        message="Do you want to save this facility?"
+      />
     </>
   );
 };
