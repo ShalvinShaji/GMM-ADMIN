@@ -89,3 +89,7 @@
   background: none !important;
   box-shadow: none !important;
 }
+
+.news-post-short-desc {
+  text-align: justify !important;
+}
