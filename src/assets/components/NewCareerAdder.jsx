@@ -18,7 +18,6 @@ const NewCareerAdder = () => {
   const [CareerDescription, setCareerDescription] = useState("");
   const [CareerDate, setCareerDate] = useState("");
   const [imageUrl, setImageUrl] = useState("");
-  const [newCareer, setNewCareer] = useState("");
   const [showSavePopup, setShowSavePopup] = useState(false);
 
   const handleFileChange = (event) => {
@@ -95,16 +94,12 @@ const NewCareerAdder = () => {
               <img src={imageUrl} alt="Uploaded" className="img-fluid" />
             )}
           </div>
-          <Button
-            onClick={() => imageInput.current.click()}
-            className="image-select-delete-btn mt-3 mb-3"
-          >
-            <span>Select Image</span>
-            <FontAwesomeIcon icon={faImage} className="ms-2" />
-          </Button>
 
           <Form>
-            <Form.Group className="mb-3">
+            <Form.Group className="">
+              <Form.Label className="add-news-title">
+                Add Career Banner Image
+              </Form.Label>
               <Form.Control
                 ref={imageInput}
                 type="file"
@@ -113,6 +108,13 @@ const NewCareerAdder = () => {
                 required
               />
             </Form.Group>
+            <Button
+              onClick={() => imageInput.current.click()}
+              className="image-select-delete-btn mb-3"
+            >
+              <span>Select Image</span>
+              <FontAwesomeIcon icon={faImage} className="ms-2" />
+            </Button>
             <Form.Group className="mb-3">
               <Form.Label className="add-news-title">
                 Add Career Title

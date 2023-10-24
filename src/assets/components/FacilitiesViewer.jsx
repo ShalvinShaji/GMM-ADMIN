@@ -13,7 +13,6 @@ import CustomPopup from "../components/CustomPopup";
 const FacilitiesViewer = () => {
   const [showDeletePopup, setshowDeletePopup] = useState(false);
   const [selectedFacilityID, setSelectedFacilityID] = useState("");
-  const [facilities, setFacilities] = useState(initialFacilitiesData);
 
   const initialFacilitiesData = [
     {
@@ -33,6 +32,7 @@ const FacilitiesViewer = () => {
     },
     // Add more facilities as needed
   ];
+  const [facilities, setFacilities] = useState(initialFacilitiesData);
 
   const handleDeleteFacility = (id) => {
     setSelectedFacilityID(id);
