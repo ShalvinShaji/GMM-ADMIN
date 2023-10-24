@@ -10,13 +10,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Sectionhead from "../components/Sectionhead";
 import { Link } from "react-router-dom";
+import CustomPopup from "../components/CustomPopup";
 
 const NewNewsItemAdder = () => {
   const imageInput = useRef(null);
-  const [NewsTitle, setNewsTitle] = useState("");
-  const [NewsDescription, setNewsDescription] = useState("");
-  const [NewsDate, setNewsDate] = useState("");
+  const [newsTitle, setNewsTitle] = useState("");
+  const [newsDescription, setNewsDescription] = useState("");
+  const [newsDate, setNewsDate] = useState("");
   const [imageUrl, setImageUrl] = useState(""); // Set the initial sample image URL
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -40,11 +42,39 @@ const NewNewsItemAdder = () => {
   const handleNewsDateChange = (event) => {
     setNewsDate(event.target.value);
   };
-  const handleNews = () => {
-    console.log("News Title:", NewsTitle);
-    console.log("News Date:", NewsDate);
-    console.log("News Description:", NewsDescription);
-    console.log("news uploaded");
+  // const handleSaveNews = () => {
+  // console.log("News Title:", NewsTitle);
+  // console.log("News Date:", NewsDate);
+  // console.log("News Description:", NewsDescription);
+  // console.log("news uploaded");
+  // };
+
+  const handleSaveNews = () => {
+    if (!newsTitle || !imageUrl || !newsDate || !newsDescription) {
+      // If any of the required fields are empty, show an alert
+      alert("Please fill in all the required fields.");
+    } else {
+      setShowPopup(true);
+    }
+  };
+
+  const handleConfirmSaveAlbum = () => {
+    const newNewsItem = {
+      title: newsTitle,
+      description: newsDescription,
+      date: newsDate,
+      image: imageUrl,
+    };
+    console.log(newNewsItem);
+    setShowPopup(false);
+    setNewsTitle("");
+    setNewsDate("");
+    setNewsDescription("");
+    setImageUrl("");
+  };
+
+  const handlePopupClose = () => {
+    setShowPopup(false);
   };
   return (
     <>
@@ -91,7 +121,7 @@ const NewNewsItemAdder = () => {
               <Form.Control
                 type="text"
                 placeholder="Enter news title here..."
-                value={NewsTitle}
+                value={newsTitle}
                 onChange={handleNewsTitleChange}
                 className="news-title-area "
                 required
@@ -101,7 +131,7 @@ const NewNewsItemAdder = () => {
               <Form.Label className="add-news-date">Add News Month</Form.Label>
               <Form.Control
                 type="month"
-                value={NewsDate}
+                value={newsDate}
                 onChange={handleNewsDateChange}
                 className="news-date-area"
                 min="2023-08"
@@ -118,20 +148,29 @@ const NewNewsItemAdder = () => {
                 rows={10}
                 className="news-descrption-text-area no-border"
                 placeholder="Enter the news description here..."
-                value={NewsDescription}
+                value={newsDescription}
                 onChange={handleNewsDescriptionChange}
                 required
               />
             </Form.Group>
           </Form>
           <div className="save-news-btn d-flex justify-content-center align-items-center">
-            <Button className="image-select-delete-btn" onClick={handleNews}>
+            <Button
+              className="image-select-delete-btn"
+              onClick={handleSaveNews}
+            >
               <span>Save News</span>
               <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
             </Button>
           </div>
         </div>
       </section>
+      <CustomPopup
+        show={showPopup}
+        onHide={handlePopupClose}
+        onConfirm={handleConfirmSaveAlbum}
+        message="Do you really want to save this News?"
+      />
     </>
   );
 };
