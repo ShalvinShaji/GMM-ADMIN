@@ -122,7 +122,7 @@ const NewDepartmentAdder = () => {
               {currentDepartments.map((department) => (
                 <div
                   key={department.id}
-                  className="col-lg-3 col-md-6 col-12 text-center mb-3"
+                  className="col-lg-3 col-md-6 col-12 text-center mb-4"
                 >
                   <p className="dep-item">{department.name}</p>
                   <Button
@@ -141,21 +141,11 @@ const NewDepartmentAdder = () => {
       <section>
         <Sectionhead sectionname="Add a new department" />
         <div className="container">
-          <div className="department-image">
-            {imageUrl && (
-              <img src={imageUrl} alt="Uploaded" className="img-fluid" />
-            )}
-          </div>
-          <Button
-            onClick={() => imageInput.current.click()}
-            className="image-select-delete-btn mt-3 mb-3"
-          >
-            <span>Select Image</span>
-            <FontAwesomeIcon icon={faImage} className="ms-2" />
-          </Button>
-
           <Form>
-            <Form.Group className="mb-3">
+            <Form.Group>
+              <Form.Label className="input-labels">
+                Add Department Banner Image
+              </Form.Label>
               <Form.Control
                 ref={imageInput}
                 type="file"
@@ -164,28 +154,41 @@ const NewDepartmentAdder = () => {
                 required
               />
             </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label className="add-department-title">
-                Add department name
+
+            <div className="department-image">
+              {imageUrl && (
+                <img src={imageUrl} alt="Uploaded" className="img-fluid" />
+              )}
+            </div>
+            <Button
+              onClick={() => imageInput.current.click()}
+              className="image-select-delete-btn mt-1 mb-4"
+            >
+              <span>Select Image</span>
+              <FontAwesomeIcon icon={faImage} className="ms-2" />
+            </Button>
+            <Form.Group className="mb-4">
+              <Form.Label className="input-labels">
+                Add Department Name
               </Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter department name here..."
                 value={departmentTitle}
                 onChange={handleDepartmentTitleChange}
-                className="department-title-area "
+                className="input-fields"
                 required
               />
             </Form.Group>
 
-            <Form.Group className="mb-3">
-              <Form.Label className="add-department-descrption">
-                Add department Description
+            <Form.Group className="mb-4">
+              <Form.Label className="input-labels">
+                Add Department Description
               </Form.Label>
               <Form.Control
                 as="textarea"
                 rows={10}
-                className="department-descrption-text-area no-border"
+                className="input-fields"
                 placeholder="Enter the department description here..."
                 value={departmentDescription}
                 onChange={handleDepartmentDescriptionChange}
@@ -198,7 +201,7 @@ const NewDepartmentAdder = () => {
               className="image-select-delete-btn"
               onClick={handleSaveDepartment}
             >
-              <span>Save department</span>
+              <span>Save Department</span>
               <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
             </Button>
           </div>

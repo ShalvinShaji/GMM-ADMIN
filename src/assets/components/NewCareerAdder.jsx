@@ -94,10 +94,9 @@ const NewCareerAdder = () => {
               <img src={imageUrl} alt="Uploaded" className="img-fluid" />
             )}
           </div>
-
           <Form>
-            <Form.Group className="">
-              <Form.Label className="add-news-title">
+            <Form.Group>
+              <Form.Label className="input-labels">
                 Add Career Banner Image
               </Form.Label>
               <Form.Control
@@ -110,28 +109,24 @@ const NewCareerAdder = () => {
             </Form.Group>
             <Button
               onClick={() => imageInput.current.click()}
-              className="image-select-delete-btn mb-3"
+              className="image-select-delete-btn mb-4"
             >
               <span>Select Image</span>
               <FontAwesomeIcon icon={faImage} className="ms-2" />
             </Button>
-            <Form.Group className="mb-3">
-              <Form.Label className="add-news-title">
-                Add Career Title
-              </Form.Label>
+            <Form.Group className="mb-4">
+              <Form.Label className="input-labels">Add Career Title</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter career title here..."
                 value={CareerTitle}
                 onChange={handleCareerTitleChange}
-                className="news-title-area "
+                className="input-fields"
                 required
               />
             </Form.Group>
-            <Form.Group className="mb-3" as={Col} md="3">
-              <Form.Label className="add-news-date">
-                Add Career Month
-              </Form.Label>
+            <Form.Group className="mb-4" as={Col} md="3">
+              <Form.Label className="input-labels">Add Career Month</Form.Label>
               <Form.Control
                 type="month"
                 value={CareerDate}
@@ -142,14 +137,14 @@ const NewCareerAdder = () => {
                 required
               />
             </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label className="add-news-descrption">
+            <Form.Group className="mb-4">
+              <Form.Label className="input-labels">
                 Add Career Description
               </Form.Label>
               <Form.Control
                 as="textarea"
                 rows={10}
-                className="news-descrption-text-area no-border"
+                className="input-fields"
                 placeholder="Enter the career description here..."
                 value={CareerDescription}
                 onChange={handleCareerDescriptionChange}

@@ -108,3 +108,23 @@ section {
 .image-select-delete-btn:active {
   background-color: crimson !important;
 }
+
+.input-labels {
+  font-size: 15px;
+  font-weight: 460;
+  color: #6b6b6b;
+  margin-bottom: 3px !important;
+}
+
+.input-fields {
+  font-size: 14px !important;
+  border-radius: 5px !important;
+  padding: 8px !important;
+}
+.input-fields:active,
+.input-fields:focus {
+  outline: none;
+  border: 1px solid crimson !important;
+  background: none !important;
+  box-shadow: none !important;
+}

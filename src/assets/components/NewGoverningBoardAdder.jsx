@@ -110,7 +110,7 @@ const GoverningBoardViewer = () => {
               <div className="patron">
                 <Form>
                   <Form.Group className="mb-3">
-                    <Form.Label className="add-patron-name">
+                    <Form.Label className="input-labels">
                       Add patron name
                     </Form.Label>
                     <Form.Control
@@ -118,7 +118,7 @@ const GoverningBoardViewer = () => {
                       placeholder="Enter patron name here..."
                       value={patronName}
                       onChange={handlepatronNameChange}
-                      className="news-title-area "
+                      className="input-fields"
                       required
                     />
                   </Form.Group>
@@ -129,7 +129,7 @@ const GoverningBoardViewer = () => {
               <div className="president">
                 <Form>
                   <Form.Group className="mb-3">
-                    <Form.Label className="add-president-name">
+                    <Form.Label className="input-labels">
                       Add president name
                     </Form.Label>
                     <Form.Control
@@ -137,7 +137,7 @@ const GoverningBoardViewer = () => {
                       placeholder="Enter president name here..."
                       value={presidentName}
                       onChange={handlePresidentNameChange}
-                      className="news-title-area "
+                      className="input-fields"
                       required
                     />
                   </Form.Group>
@@ -148,7 +148,7 @@ const GoverningBoardViewer = () => {
               <div className="secretary">
                 <Form>
                   <Form.Group className="mb-3">
-                    <Form.Label className="add-secretary-name">
+                    <Form.Label className="input-labels">
                       Add secretary name
                     </Form.Label>
                     <Form.Control
@@ -156,7 +156,7 @@ const GoverningBoardViewer = () => {
                       placeholder="Enter secretary name here..."
                       value={secretaryName}
                       onChange={handleSecretaryNameChange}
-                      className="news-title-area "
+                      className="input-fields"
                       required
                     />
                   </Form.Group>
@@ -167,7 +167,7 @@ const GoverningBoardViewer = () => {
               <div className="joint-secretary">
                 <Form>
                   <Form.Group className="mb-3">
-                    <Form.Label className="add-joint-secretary-name">
+                    <Form.Label className="input-labels">
                       Add joint secretary name
                     </Form.Label>
                     <Form.Control
@@ -175,7 +175,7 @@ const GoverningBoardViewer = () => {
                       placeholder="Enter joint secretary name here..."
                       value={jointSecretaryName}
                       onChange={handleJointSecretaryNameChange}
-                      className="news-title-area "
+                      className="input-fields"
                       required
                     />
                   </Form.Group>
@@ -186,7 +186,7 @@ const GoverningBoardViewer = () => {
               <div className="Treasurer">
                 <Form>
                   <Form.Group className="mb-3">
-                    <Form.Label className="add-Treasurer-name">
+                    <Form.Label className="input-labels">
                       Add treasurer name
                     </Form.Label>
                     <Form.Control
@@ -194,7 +194,7 @@ const GoverningBoardViewer = () => {
                       placeholder="Enter treasurer name here..."
                       value={treasurerName}
                       onChange={handleTreasurerNameChange}
-                      className="news-title-area "
+                      className="input-fields"
                       required
                     />
                   </Form.Group>
@@ -205,7 +205,7 @@ const GoverningBoardViewer = () => {
               <div className="Hon-Administrator">
                 <Form>
                   <Form.Group className="mb-3">
-                    <Form.Label className="add-Hon-Administrator-name">
+                    <Form.Label className="input-labels">
                       Add Hon. Administrator name
                     </Form.Label>
                     <Form.Control
@@ -213,7 +213,7 @@ const GoverningBoardViewer = () => {
                       placeholder="Enter Hon. Administrator name here..."
                       value={administratorName}
                       onChange={handleAdministratorNameChange}
-                      className="news-title-area "
+                      className="input-fields"
                       required
                     />
                   </Form.Group>
@@ -224,7 +224,7 @@ const GoverningBoardViewer = () => {
               <div className="Chief-Medical-Officer">
                 <Form>
                   <Form.Group className="mb-3">
-                    <Form.Label className="add-Chief-Medical-Officer-name">
+                    <Form.Label className="input-labels">
                       Add Chief Medical Officer name
                     </Form.Label>
                     <Form.Control
@@ -232,7 +232,7 @@ const GoverningBoardViewer = () => {
                       placeholder="Enter chief medical officer name here..."
                       value={chiefMedicalOfficerName}
                       onChange={handleChiefMedicalOfficerNameChange}
-                      className="news-title-area "
+                      className="input-fields"
                       required
                     />
                   </Form.Group>

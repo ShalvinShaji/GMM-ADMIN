@@ -42,12 +42,6 @@ const NewNewsItemAdder = () => {
   const handleNewsDateChange = (event) => {
     setNewsDate(event.target.value);
   };
-  // const handleSaveNews = () => {
-  // console.log("News Title:", NewsTitle);
-  // console.log("News Date:", NewsDate);
-  // console.log("News Description:", NewsDescription);
-  // console.log("news uploaded");
-  // };
 
   const handleSaveNews = () => {
     if (!newsTitle || !imageUrl || !newsDate || !newsDescription) {
@@ -95,7 +89,7 @@ const NewNewsItemAdder = () => {
 
           <Form>
             <Form.Group className="">
-              <Form.Label className="add-news-title">Add News Image</Form.Label>
+              <Form.Label className="input-labels">Add News Image</Form.Label>
               <Form.Control
                 ref={imageInput}
                 type="file"
@@ -117,36 +111,36 @@ const NewNewsItemAdder = () => {
               )}
             </div>
             <Form.Group className="mb-3">
-              <Form.Label className="add-news-title">Add News Title</Form.Label>
+              <Form.Label className="input-labels">Add News Title</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter news title here..."
                 value={newsTitle}
                 onChange={handleNewsTitleChange}
-                className="news-title-area "
+                className="input-fields"
                 required
               />
             </Form.Group>
             <Form.Group className="mb-3" as={Col} md="3">
-              <Form.Label className="add-news-date">Add News Month</Form.Label>
+              <Form.Label className="input-labels">Add News Month</Form.Label>
               <Form.Control
                 type="month"
                 value={newsDate}
                 onChange={handleNewsDateChange}
-                className="news-date-area"
+                className="input-fields"
                 min="2023-08"
                 max="3000-08"
                 required
               />
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label className="add-news-descrption">
+              <Form.Label className="input-labels">
                 Add News Description
               </Form.Label>
               <Form.Control
                 as="textarea"
                 rows={10}
-                className="news-descrption-text-area no-border"
+                className="input-fields"
                 placeholder="Enter the news description here..."
                 value={newsDescription}
                 onChange={handleNewsDescriptionChange}

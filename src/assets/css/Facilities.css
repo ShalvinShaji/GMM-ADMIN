@@ -2,17 +2,6 @@
 # Facility
 --------------------------------------------------------------*/
 
-.facility {
-  border: 1px solid rgba(38, 38, 38, 0.378);
-  font-size: 14px;
-}
-
-.facility h3 {
-  font-size: var(--name-font-size);
-  display: inline-block !important;
-  color: var(--color-secondary-dark);
-}
-
 .facility img {
   width: 80px !important;
   height: 80px !important;
@@ -22,18 +11,4 @@
 .display-facility-image {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-}
-
-.facility-add-name {
-  font-size: 12px;
-}
-.facility-add-name input {
-  width: 200px;
-  height: 30px;
-  transition: 0.3s !important;
-  outline: none;
-  border: 1px solid #a4a4a4 !important;
-}
-.facility-add-name input:focus {
-  border: 1px solid #030331 !important;
 }

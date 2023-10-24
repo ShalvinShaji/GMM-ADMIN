@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudArrowUp, faImage } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import CustomPopup from "../components/CustomPopup";
+import Form from "react-bootstrap/Form";
 
 const CarouselImageUploader = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -32,7 +33,6 @@ const CarouselImageUploader = () => {
 
   const handleConfirmUpload = () => {
     // Handle the actual upload logic here
-    // For now, just close the popup and clear the selected images
     setShowPopup(false);
     setImageUrls([]);
   };
@@ -55,6 +55,28 @@ const CarouselImageUploader = () => {
             </Link>
           </div>
           <div className="file-input d-flex flex-column">
+            <Form>
+              <Form.Group className="">
+                <Form.Label className="input-labels">
+                  Add Carousel Images
+                </Form.Label>
+                <Form.Control
+                  ref={imageInput}
+                  type="file"
+                  className="image-input-selecter hidden"
+                  onChange={handleFileChange}
+                  multiple
+                  required
+                />
+              </Form.Group>
+              <Button
+                onClick={() => imageInput.current.click()}
+                className="image-select-delete-btn  mb-3"
+              >
+                <span>Select Image</span>
+                <FontAwesomeIcon icon={faImage} className="ms-2" />
+              </Button>
+            </Form>
             {imageUrls.map((imageUrl, index) => (
               <img
                 key={index}
@@ -63,23 +85,8 @@ const CarouselImageUploader = () => {
                 className="display-image img-fluid mb-3"
               />
             ))}
+
             <div className="Image-select-upload-buttons d-flex justify-content-around align-items-center">
-              <Button
-                onClick={() => imageInput.current.click()}
-                className="image-select-delete-btn mt-3 mb-3"
-              >
-                <span>Select Images</span>
-                <FontAwesomeIcon icon={faImage} className="ms-2" />
-              </Button>
-
-              <input
-                ref={imageInput}
-                type="file"
-                className="image-input-selecter hidden"
-                onChange={handleFileChange}
-                multiple
-              />
-
               <Button
                 className="image-select-delete-btn mt-3 mb-3"
                 onClick={uploadImages}

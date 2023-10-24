@@ -33,6 +33,7 @@
   height: 250px;
   width: 200px;
   border: 1px solid black;
+  background-color: #2a323f;
   object-fit: contain;
 }
 

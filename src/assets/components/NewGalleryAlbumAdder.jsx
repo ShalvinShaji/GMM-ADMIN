@@ -5,6 +5,7 @@ import { faCloudArrowUp, faImage } from "@fortawesome/free-solid-svg-icons";
 import Sectionhead from "../components/Sectionhead";
 import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
+import Col from "react-bootstrap/Col";
 import CustomPopup from "../components/CustomPopup";
 
 const NewGalleryItemAdder = () => {
@@ -88,10 +89,10 @@ const NewGalleryItemAdder = () => {
             </div>
           </div>
           <div className="row mb-4">
-            <div className="gallery-album-name">
+            <div className="col-6">
               <Form>
                 <Form.Group className="mb-4">
-                  <Form.Label className="add-album-title">
+                  <Form.Label className="input-labels">
                     Add album Title
                   </Form.Label>
                   <Form.Control
@@ -99,12 +100,17 @@ const NewGalleryItemAdder = () => {
                     placeholder="Enter album title here..."
                     value={albumTitle}
                     onChange={handleGalleryAlbumTitleChange}
-                    className="news-title-area "
+                    className="input-fields "
+                    maxLength="200"
                     required
                   />
                 </Form.Group>
+              </Form>
+            </div>
+            <div className="col-12 gallery-album-name">
+              <Form>
                 <Form.Group>
-                  <Form.Label className="add-album-title">
+                  <Form.Label className="input-labels">
                     Add album Images
                   </Form.Label>
                   <Form.Control
