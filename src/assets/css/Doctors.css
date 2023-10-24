@@ -8,7 +8,7 @@
   border-radius: 10px;
   /* margin-bottom: 20px; */
   transition-duration: 0.3s;
-  color: #2a323f;
+  color: #3e3e3f;
 }
 .Doctors .member .pic img {
   border-radius: 10px !important;
@@ -26,7 +26,6 @@
 .Doctors .member h4 {
   font-weight: 700;
   font-size: 14px !important;
-  margin: 6px 0;
 }
 
 .Doctor-image img {

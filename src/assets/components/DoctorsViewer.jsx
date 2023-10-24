@@ -79,12 +79,14 @@ const DoctorsViewer = () => {
                     />
                   </div>
                   <div className="member-info text-center">
-                    <h4 className="doctor-name">{doctor.name}</h4>
-                    <span className="doctor-qualification">
+                    <h4 className="doctor-name m-0">{doctor.name}</h4>
+                    <p className="doctor-qualification m-0 mt-1">
                       {doctor.qualification}
-                    </span>
-                    <h4>{doctor.designation}</h4>
-                    <span className="doctor-optime">{doctor.workingHours}</span>
+                    </p>
+                    <p className="m-0 mt-2">{doctor.designation}</p>
+                    <p className="doctor-optime m-0 mt-2">
+                      {doctor.workingHours}
+                    </p>
                   </div>
                 </div>
                 <div className="d-flex justify-content-center align-items-center">
