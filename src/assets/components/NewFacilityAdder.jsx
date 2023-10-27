@@ -80,61 +80,63 @@ const NewFacilityAdder = () => {
               </Button>
             </Link>
           </div>
-          <div className="row data-adder facility-adder">
-            <div className="col-6  d-flex flex-column">
-              <Form>
-                <Form.Label className="input-labels">
-                  Add Facility Logo
-                </Form.Label>
-                <div>
-                  {imageUrl && (
-                    <img
-                      src={imageUrl}
-                      alt="Uploaded"
-                      className="display-facility-image me-2 "
-                    />
-                  )}
-                  <Button
-                    onClick={() => imageInput.current.click()}
-                    className="image-select-delete-btn mt-3 mb-3"
-                  >
-                    <span>Select Logo</span>
-                    <FontAwesomeIcon icon={faImage} className="ms-2" />
-                  </Button>
-                </div>
-                <Form.Group>
-                  <Form.Control
-                    ref={imageInput}
-                    type="file"
-                    className="image-input-selecter hidden"
-                    onChange={handleFileChange}
-                    required
-                  />
-                </Form.Group>
-                <Form.Group className="mt-4 mb-4">
+          <div className="data-adder">
+            <div className="row  facility-adder">
+              <div className="col-6  d-flex flex-column">
+                <Form>
                   <Form.Label className="input-labels">
-                    Add Facility Name
+                    Add Facility Logo
                   </Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Enter Facility Name here..."
-                    value={facilityName}
-                    onChange={handleFacilityNameChange}
-                    className="input-fields"
-                    required
-                  />
-                </Form.Group>
-              </Form>
-            </div>
-            <div className="d-flex justify-content-start align-items-center mt-3">
-              <Button
-                variant="primary"
-                className="image-select-delete-btn mb-3"
-                onClick={handleSaveFacility}
-              >
-                <span>Save Facility</span>
-                <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
-              </Button>
+                  <div>
+                    {imageUrl && (
+                      <img
+                        src={imageUrl}
+                        alt="Uploaded"
+                        className="display-facility-image me-2 "
+                      />
+                    )}
+                    <Button
+                      onClick={() => imageInput.current.click()}
+                      className="image-select-delete-btn mt-3 mb-3"
+                    >
+                      <span>Select Logo</span>
+                      <FontAwesomeIcon icon={faImage} className="ms-2" />
+                    </Button>
+                  </div>
+                  <Form.Group>
+                    <Form.Control
+                      ref={imageInput}
+                      type="file"
+                      className="image-input-selecter hidden"
+                      onChange={handleFileChange}
+                      required
+                    />
+                  </Form.Group>
+                  <Form.Group className="mt-4 mb-4">
+                    <Form.Label className="input-labels">
+                      Add Facility Name
+                    </Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="Enter Facility Name here..."
+                      value={facilityName}
+                      onChange={handleFacilityNameChange}
+                      className="input-fields"
+                      required
+                    />
+                  </Form.Group>
+                </Form>
+              </div>
+              <div className="d-flex justify-content-start align-items-center mt-3">
+                <Button
+                  variant="primary"
+                  className="image-select-delete-btn mb-3"
+                  onClick={handleSaveFacility}
+                >
+                  <span>Save Facility</span>
+                  <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>

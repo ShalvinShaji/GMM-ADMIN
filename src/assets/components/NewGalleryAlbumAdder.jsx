@@ -88,59 +88,61 @@ const NewGalleryItemAdder = () => {
               </Link>
             </div>
           </div>
-          <div className="row mb-4 data-adder">
-            <div className="col-6">
-              <Form>
-                <Form.Group className="mb-4">
-                  <Form.Label className="input-labels">
-                    Add album Title
-                  </Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Enter album title here..."
-                    value={albumTitle}
-                    onChange={handleGalleryAlbumTitleChange}
-                    className="input-fields "
-                    maxLength="200"
-                    required
-                  />
-                </Form.Group>
-              </Form>
-            </div>
-            <div className="col-12 gallery-album-name">
-              <Form>
-                <Form.Group>
-                  <Form.Label className="input-labels">
-                    Add album Images
-                  </Form.Label>
-                  <Form.Control
-                    ref={AlbumImageInput}
-                    type="file"
-                    className="image-input-selecter hidden"
-                    onChange={handleAlbumImageChange}
-                    required
-                    multiple
-                  />
-                </Form.Group>
+          <div className="data-adder">
+            <div className="row mb-4 ">
+              <div className="col-6">
+                <Form>
+                  <Form.Group className="mb-4">
+                    <Form.Label className="input-labels">
+                      Add album Title
+                    </Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="Enter album title here..."
+                      value={albumTitle}
+                      onChange={handleGalleryAlbumTitleChange}
+                      className="input-fields "
+                      maxLength="200"
+                      required
+                    />
+                  </Form.Group>
+                </Form>
+              </div>
+              <div className="col-12 gallery-album-name">
+                <Form>
+                  <Form.Group>
+                    <Form.Label className="input-labels">
+                      Add album Images
+                    </Form.Label>
+                    <Form.Control
+                      ref={AlbumImageInput}
+                      type="file"
+                      className="image-input-selecter hidden"
+                      onChange={handleAlbumImageChange}
+                      required
+                      multiple
+                    />
+                  </Form.Group>
 
+                  <Button
+                    onClick={() => AlbumImageInput.current.click()}
+                    className="image-select-delete-btn mb-3"
+                  >
+                    <span>Select Images</span>
+                    <FontAwesomeIcon icon={faImage} className="ms-2" />
+                  </Button>
+                </Form>
+              </div>
+              <div className="row">{renderSelectedImages()}</div>
+              <div className="create-album d-flex justify-content-center align-items-center">
                 <Button
-                  onClick={() => AlbumImageInput.current.click()}
-                  className="image-select-delete-btn mb-3"
+                  onClick={handleSaveAlbum}
+                  className="image-select-delete-btn  mb-2"
                 >
-                  <span>Select Images</span>
-                  <FontAwesomeIcon icon={faImage} className="ms-2" />
+                  <span>Create Album</span>
+                  <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
                 </Button>
-              </Form>
-            </div>
-            <div className="row">{renderSelectedImages()}</div>
-            <div className="create-album d-flex justify-content-center align-items-center">
-              <Button
-                onClick={handleSaveAlbum}
-                className="image-select-delete-btn  mb-2"
-              >
-                <span>Create Album</span>
-                <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
-              </Button>
+              </div>
             </div>
           </div>
         </div>

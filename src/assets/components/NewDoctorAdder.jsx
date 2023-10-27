@@ -115,125 +115,127 @@ const NewDoctorItemAdder = () => {
               </Button>
             </Link>
           </div>
-          <div className="row data-adder">
-            <div className="col-lg-2">
-              <div className="Doctor-image">
-                {imageUrl && (
-                  <img src={imageUrl} alt="Uploaded" className="img-fluid" />
-                )}
+          <div className="data-adder">
+            <div className="row ">
+              <div className="col-lg-2">
+                <div className="Doctor-image">
+                  {imageUrl && (
+                    <img src={imageUrl} alt="Uploaded" className="img-fluid" />
+                  )}
+                </div>
+                <Button
+                  onClick={() => imageInput.current.click()}
+                  className="image-select-delete-btn mt-3 mb-4"
+                >
+                  <span>Select Doctor Image</span>
+                  <FontAwesomeIcon icon={faImage} className="ms-2" />
+                </Button>
               </div>
-              <Button
-                onClick={() => imageInput.current.click()}
-                className="image-select-delete-btn mt-3 mb-4"
-              >
-                <span>Select Doctor Image</span>
-                <FontAwesomeIcon icon={faImage} className="ms-2" />
-              </Button>
-            </div>
-            <div className="col-lg-5">
-              <Form>
-                <Form.Group>
-                  <Form.Control
-                    ref={imageInput}
-                    type="file"
-                    className="image-input-selecter"
-                    onChange={handleFileChange}
-                    required
-                  />
-                </Form.Group>
-                <Form.Group className="mb-4">
-                  <Form.Label className="input-labels">
-                    Add Doctor Name
-                  </Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Enter Doctor Name here..."
-                    value={DoctorName}
-                    onChange={handleDoctorNameChange}
-                    className="input-fields"
-                    required
-                  />
-                </Form.Group>
-                <Form.Group className="mb-4">
-                  <Form.Label className="input-labels">
-                    Select Doctor Department
-                  </Form.Label>
-                  <div>
-                    <select
-                      value={selectedDepartment}
-                      onChange={handleDepartmentChange}
-                      style={{
-                        width: "300px",
-                        height: "30px",
-                        border: "1px soild black",
-                        borderRadius: "5px",
-                        outline: "none",
-                      }}
-                    >
-                      <option value="Select department">
-                        Select department
-                      </option>
-                      {departmentsList.map((department) => (
-                        <option key={department.id} value={department.id}>
-                          {department.name}
+              <div className="col-lg-5">
+                <Form>
+                  <Form.Group>
+                    <Form.Control
+                      ref={imageInput}
+                      type="file"
+                      className="image-input-selecter"
+                      onChange={handleFileChange}
+                      required
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-4">
+                    <Form.Label className="input-labels">
+                      Add Doctor Name
+                    </Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="Enter Doctor Name here..."
+                      value={DoctorName}
+                      onChange={handleDoctorNameChange}
+                      className="input-fields"
+                      required
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-4">
+                    <Form.Label className="input-labels">
+                      Select Doctor Department
+                    </Form.Label>
+                    <div>
+                      <select
+                        value={selectedDepartment}
+                        onChange={handleDepartmentChange}
+                        style={{
+                          width: "300px",
+                          height: "30px",
+                          border: "1px soild black",
+                          borderRadius: "5px",
+                          outline: "none",
+                        }}
+                      >
+                        <option value="Select department">
+                          Select department
                         </option>
-                      ))}
-                    </select>
-                  </div>
-                </Form.Group>
-                <Form.Group className="mb-4">
-                  <Form.Label className="input-labels">
-                    Add Doctor Qualification
-                  </Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Enter Doctor Qualification here..."
-                    value={DoctorQualification}
-                    onChange={handleDoctorQualification}
-                    className="input-fields"
-                    required
-                  />
-                </Form.Group>
-              </Form>
-            </div>
-            <div className="col-lg-5">
-              <Form>
-                <Form.Group className="mb-4">
-                  <Form.Label className="input-labels">
-                    Add Doctor Role
-                  </Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Enter Doctor Role Name here..."
-                    value={DoctorRole}
-                    onChange={handleDoctorRole}
-                    className="input-fields"
-                    required
-                  />
-                </Form.Group>
-                <Form.Group className="mb-4">
-                  <Form.Label className="input-labels">
-                    Add Doctor OP time
-                  </Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Enter Doctor op time here like Monday-Friday 9AM-5PM"
-                    value={DoctorOpTime}
-                    onChange={handleDoctorOpTime}
-                    className="input-fields"
-                    required
-                  />
-                </Form.Group>
-              </Form>
-            </div>
-            <div className="save-Doctor-btn d-flex justify-content-center align-items-center">
-              <Button
-                className="image-select-delete-btn"
-                onClick={handleSaveDoctor}
-              >
-                <span>Save Doctor</span>
-                <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
-              </Button>
+                        {departmentsList.map((department) => (
+                          <option key={department.id} value={department.id}>
+                            {department.name}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </Form.Group>
+                  <Form.Group className="mb-4">
+                    <Form.Label className="input-labels">
+                      Add Doctor Qualification
+                    </Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="Enter Doctor Qualification here..."
+                      value={DoctorQualification}
+                      onChange={handleDoctorQualification}
+                      className="input-fields"
+                      required
+                    />
+                  </Form.Group>
+                </Form>
+              </div>
+              <div className="col-lg-5">
+                <Form>
+                  <Form.Group className="mb-4">
+                    <Form.Label className="input-labels">
+                      Add Doctor Role
+                    </Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="Enter Doctor Role Name here..."
+                      value={DoctorRole}
+                      onChange={handleDoctorRole}
+                      className="input-fields"
+                      required
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-4">
+                    <Form.Label className="input-labels">
+                      Add Doctor OP time
+                    </Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="Enter Doctor op time here like Monday-Friday 9AM-5PM"
+                      value={DoctorOpTime}
+                      onChange={handleDoctorOpTime}
+                      className="input-fields"
+                      required
+                    />
+                  </Form.Group>
+                </Form>
+              </div>
+              <div className="save-Doctor-btn d-flex justify-content-center align-items-center">
+                <Button
+                  className="image-select-delete-btn"
+                  onClick={handleSaveDoctor}
+                >
+                  <span>Save Doctor</span>
+                  <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>

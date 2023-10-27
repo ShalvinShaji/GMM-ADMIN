@@ -140,70 +140,72 @@ const NewDepartmentAdder = () => {
       </section>
       <section>
         <Sectionhead sectionname="Add a new department" />
-        <div className="container data-adder">
-          <Form>
-            <Form.Group>
-              <Form.Label className="input-labels">
-                Add Department Banner Image
-              </Form.Label>
-              <Form.Control
-                ref={imageInput}
-                type="file"
-                className="image-input-selecter"
-                onChange={handleFileChange}
-                required
-              />
-            </Form.Group>
+        <div className="container ">
+          <div className="data-adder">
+            <Form>
+              <Form.Group>
+                <Form.Label className="input-labels">
+                  Add Department Banner Image
+                </Form.Label>
+                <Form.Control
+                  ref={imageInput}
+                  type="file"
+                  className="image-input-selecter"
+                  onChange={handleFileChange}
+                  required
+                />
+              </Form.Group>
 
-            <div className="department-image">
-              {imageUrl && (
-                <img src={imageUrl} alt="Uploaded" className="img-fluid" />
-              )}
+              <div className="department-image">
+                {imageUrl && (
+                  <img src={imageUrl} alt="Uploaded" className="img-fluid" />
+                )}
+              </div>
+              <Button
+                onClick={() => imageInput.current.click()}
+                className="image-select-delete-btn mt-1 mb-4"
+              >
+                <span>Select Image</span>
+                <FontAwesomeIcon icon={faImage} className="ms-2" />
+              </Button>
+              <Form.Group className="mb-4">
+                <Form.Label className="input-labels">
+                  Add Department Name
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter department name here..."
+                  value={departmentTitle}
+                  onChange={handleDepartmentTitleChange}
+                  className="input-fields"
+                  required
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-4">
+                <Form.Label className="input-labels">
+                  Add Department Description
+                </Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={10}
+                  className="input-fields"
+                  placeholder="Enter the department description here..."
+                  value={departmentDescription}
+                  onChange={handleDepartmentDescriptionChange}
+                  required
+                />
+              </Form.Group>
+            </Form>
+            <div className="save-department-btn d-flex justify-content-center align-items-center">
+              <Button
+                className="image-select-delete-btn"
+                onClick={handleSaveDepartment}
+              >
+                <span>Save Department</span>
+                <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
+              </Button>
             </div>
-            <Button
-              onClick={() => imageInput.current.click()}
-              className="image-select-delete-btn mt-1 mb-4"
-            >
-              <span>Select Image</span>
-              <FontAwesomeIcon icon={faImage} className="ms-2" />
-            </Button>
-            <Form.Group className="mb-4">
-              <Form.Label className="input-labels">
-                Add Department Name
-              </Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Enter department name here..."
-                value={departmentTitle}
-                onChange={handleDepartmentTitleChange}
-                className="input-fields"
-                required
-              />
-            </Form.Group>
-
-            <Form.Group className="mb-4">
-              <Form.Label className="input-labels">
-                Add Department Description
-              </Form.Label>
-              <Form.Control
-                as="textarea"
-                rows={10}
-                className="input-fields"
-                placeholder="Enter the department description here..."
-                value={departmentDescription}
-                onChange={handleDepartmentDescriptionChange}
-                required
-              />
-            </Form.Group>
-          </Form>
-          <div className="save-department-btn d-flex justify-content-center align-items-center">
-            <Button
-              className="image-select-delete-btn"
-              onClick={handleSaveDepartment}
-            >
-              <span>Save Department</span>
-              <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
-            </Button>
           </div>
         </div>
       </section>
