@@ -117,12 +117,12 @@ const NewDepartmentAdder = () => {
               </Button>
             </Link>
           </div>
-          <div className="current-departments">
-            <div className="row">
+          <div className="current-departments data-adder">
+            <div className="row gy-5">
               {currentDepartments.map((department) => (
                 <div
                   key={department.id}
-                  className="col-lg-3 col-md-6 col-12 text-center mb-4"
+                  className="col-lg-3 col-md-6 col-12 text-center "
                 >
                   <p className="dep-item">{department.name}</p>
                   <Button
@@ -140,7 +140,7 @@ const NewDepartmentAdder = () => {
       </section>
       <section>
         <Sectionhead sectionname="Add a new department" />
-        <div className="container">
+        <div className="container data-adder">
           <Form>
             <Form.Group>
               <Form.Label className="input-labels">

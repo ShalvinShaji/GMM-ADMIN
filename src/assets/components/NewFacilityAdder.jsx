@@ -68,7 +68,7 @@ const NewFacilityAdder = () => {
     <>
       <section className="NewFacilityAdder">
         <Sectionhead sectionname="Add Facility" />
-        <div className="container">
+        <div className="container ">
           <div className="back-to-prev d-flex justify-content-end align-items-start mb-4">
             <Link to="/Facilities">
               <Button className="image-select-delete-btn">
@@ -80,8 +80,8 @@ const NewFacilityAdder = () => {
               </Button>
             </Link>
           </div>
-          <div className="row">
-            <div className="col-6 facility d-flex flex-column">
+          <div className="row data-adder facility-adder">
+            <div className="col-6  d-flex flex-column">
               <Form>
                 <Form.Label className="input-labels">
                   Add Facility Logo
@@ -126,7 +126,7 @@ const NewFacilityAdder = () => {
                 </Form.Group>
               </Form>
             </div>
-            <div className="d-flex justify-content-start align-items-center">
+            <div className="d-flex justify-content-start align-items-center mt-3">
               <Button
                 variant="primary"
                 className="image-select-delete-btn mb-3"

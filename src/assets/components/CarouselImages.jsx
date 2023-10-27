@@ -56,8 +56,8 @@ const CarouselImages = () => {
               </Button>
             </Link>
           </div>
-          <div className="carousel-image-box">
-            <div className="row g-3">
+          <div className="carousel-image-box ">
+            <div className="row g-3 ">
               {images.map((image) => (
                 <div
                   key={image.id}

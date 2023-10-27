@@ -18,20 +18,19 @@
 .post-title {
   font-size: 16px;
   font-weight: 500;
-  text-align: start;
 }
 
 .post-date {
   font-style: italic !important;
   font-weight: 400;
 }
-.post-readmore {
+/* .post-readmore {
   background-color: crimson;
   color: white;
   border: none;
   font-size: 12px;
   padding: 10px;
-}
+} */
 
 /* .post-readmore:hover,
 .post-readmore:active {

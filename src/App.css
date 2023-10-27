@@ -128,3 +128,9 @@ section {
   background: none !important;
   box-shadow: none !important;
 }
+
+.data-adder {
+  box-shadow: #88888a6d 0px 8px 24px !important;
+  padding: 20px !important;
+  border-radius: 5px !important;
+}

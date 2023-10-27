@@ -40,7 +40,7 @@ const NewGalleryItemAdder = () => {
 
   const renderSelectedImages = () => {
     return selectedImages.map((imageUrl, index) => (
-      <div key={index} className="col-md-3 mb-4">
+      <div key={index} className="col-md-3 mb-4 ">
         <img src={imageUrl} alt={`Image ${index}`} className="img-fluid" />
       </div>
     ));
@@ -88,7 +88,7 @@ const NewGalleryItemAdder = () => {
               </Link>
             </div>
           </div>
-          <div className="row mb-4">
+          <div className="row mb-4 data-adder">
             <div className="col-6">
               <Form>
                 <Form.Group className="mb-4">
@@ -125,23 +125,23 @@ const NewGalleryItemAdder = () => {
 
                 <Button
                   onClick={() => AlbumImageInput.current.click()}
-                  className="image-select-delete-btn"
+                  className="image-select-delete-btn mb-3"
                 >
                   <span>Select Images</span>
                   <FontAwesomeIcon icon={faImage} className="ms-2" />
                 </Button>
               </Form>
             </div>
-          </div>
-          <div className="row">{renderSelectedImages()}</div>
-          <div className="create-album d-flex justify-content-center align-items-center">
-            <Button
-              onClick={handleSaveAlbum}
-              className="image-select-delete-btn  mb-2"
-            >
-              <span>Create Album</span>
-              <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
-            </Button>
+            <div className="row">{renderSelectedImages()}</div>
+            <div className="create-album d-flex justify-content-center align-items-center">
+              <Button
+                onClick={handleSaveAlbum}
+                className="image-select-delete-btn  mb-2"
+              >
+                <span>Create Album</span>
+                <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
+              </Button>
+            </div>
           </div>
         </div>
       </section>

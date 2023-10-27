@@ -54,7 +54,7 @@ const CarouselImageUploader = () => {
               </Button>
             </Link>
           </div>
-          <div className="file-input d-flex flex-column">
+          <div className="file-input d-flex flex-column data-adder">
             <Form>
               <Form.Group className="">
                 <Form.Label className="input-labels">

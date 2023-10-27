@@ -14,7 +14,7 @@ const RecentNewsViewer = () => {
   const initialNewsData = [
     {
       id: 1,
-      title: "News 1",
+      title: "1 Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       image: "https://images.hdqwalls.com/wallpapers/hellsweeper-vr-sy.jpg",
       shortDesc:
         " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit nisi consequatur eligendi est doloribus! Adipisci natus quibusdam a doloremque?",
@@ -22,7 +22,7 @@ const RecentNewsViewer = () => {
     },
     {
       id: 2,
-      title: "News 2",
+      title: "2 Lorem ipsum dolor sit amet consectetur adipisicing elit",
       image: "https://images.hdqwalls.com/wallpapers/hellsweeper-vr-sy.jpg",
       shortDesc:
         " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit nisi consequatur eligendi est doloribus! Adipisci natus quibusdam a doloremque?",
@@ -70,21 +70,21 @@ const RecentNewsViewer = () => {
             {newsData.map((news) => (
               <div key={news.id} className="col-xl-4 col-md-6  p-3">
                 <div className="post-box p-3">
-                  <div className="post-img d-flex justify-content-center">
+                  <div className="post-img d-flex justify-content-center align-items-start">
                     <img
                       src={news.image}
                       alt="news-img"
                       className="img-fluid"
                     />
                   </div>
-                  <div className="post-title d-flex justify-content-between">
-                    <p className=" text-wrap">{news.title}</p>
+                  <div className="post-title mt-2">
+                    <p className="">{news.title}</p>
                   </div>
-                  <div className="news-post-short-desc">
+                  <div className="m-0 news-post-short-desc">
                     <p>{news.shortDesc}</p>
                   </div>
-                  <div className="news-details d-flex justify-content-between align-items-center">
-                    <p className="post-date text-end m-0">{news.date}</p>
+                  <div className="news-details">
+                    <p className="post-date text-start m-0 ">{news.date}</p>
                   </div>
                 </div>
                 <div className="post-delete d-flex justify-content-center align-items-center mt-2 mb-2">

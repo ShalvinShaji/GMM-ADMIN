@@ -115,7 +115,7 @@ const NewDoctorItemAdder = () => {
               </Button>
             </Link>
           </div>
-          <div className="row">
+          <div className="row data-adder">
             <div className="col-lg-2">
               <div className="Doctor-image">
                 {imageUrl && (
@@ -170,6 +170,9 @@ const NewDoctorItemAdder = () => {
                         outline: "none",
                       }}
                     >
+                      <option value="Select department">
+                        Select department
+                      </option>
                       {departmentsList.map((department) => (
                         <option key={department.id} value={department.id}>
                           {department.name}
@@ -223,16 +226,15 @@ const NewDoctorItemAdder = () => {
                 </Form.Group>
               </Form>
             </div>
-          </div>
-
-          <div className="save-Doctor-btn d-flex justify-content-center align-items-center">
-            <Button
-              className="image-select-delete-btn"
-              onClick={handleSaveDoctor}
-            >
-              <span>Save Doctor</span>
-              <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
-            </Button>
+            <div className="save-Doctor-btn d-flex justify-content-center align-items-center">
+              <Button
+                className="image-select-delete-btn"
+                onClick={handleSaveDoctor}
+              >
+                <span>Save Doctor</span>
+                <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
+              </Button>
+            </div>
           </div>
         </div>
       </section>

@@ -105,7 +105,7 @@ const GoverningBoardViewer = () => {
               </Link>
             </div>
           </div>
-          <div className="row g-3">
+          <div className="row g-3 data-adder">
             <div className="col-md-4 governing-board-fields">
               <div className="patron">
                 <Form>
@@ -239,16 +239,15 @@ const GoverningBoardViewer = () => {
                 </Form>
               </div>
             </div>
-          </div>
-
-          <div className="save-governing-board d-flex justify-content-center align-items-center">
-            <Button
-              onClick={saveGoverningBoard}
-              className="image-select-delete-btn  mb-2"
-            >
-              <span>Save Changes</span>
-              <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
-            </Button>
+            <div className="save-governing-board d-flex justify-content-center align-items-center col-12">
+              <Button
+                onClick={saveGoverningBoard}
+                className="image-select-delete-btn  mb-2"
+              >
+                <span>Save Changes</span>
+                <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
+              </Button>
+            </div>
           </div>
         </div>
       </section>

@@ -86,76 +86,77 @@ const NewNewsItemAdder = () => {
               </Button>
             </Link>
           </div>
-
-          <Form>
-            <Form.Group className="">
-              <Form.Label className="input-labels">Add News Image</Form.Label>
-              <Form.Control
-                ref={imageInput}
-                type="file"
-                className="image-input-selecter"
-                onChange={handleFileChange}
-                required
-              />
-            </Form.Group>
-            <Button
-              onClick={() => imageInput.current.click()}
-              className="image-select-delete-btn  mb-3"
-            >
-              <span>Select Image</span>
-              <FontAwesomeIcon icon={faImage} className="ms-2" />
-            </Button>
-            <div className="news-image">
-              {imageUrl && (
-                <img src={imageUrl} alt="Uploaded" className="img-fluid" />
-              )}
+          <div className="data-adder">
+            <Form>
+              <Form.Group>
+                <Form.Label className="input-labels">Add News Image</Form.Label>
+                <Form.Control
+                  ref={imageInput}
+                  type="file"
+                  className="image-input-selecter"
+                  onChange={handleFileChange}
+                  required
+                />
+              </Form.Group>
+              <Button
+                onClick={() => imageInput.current.click()}
+                className="image-select-delete-btn  mb-3"
+              >
+                <span>Select Image</span>
+                <FontAwesomeIcon icon={faImage} className="ms-2" />
+              </Button>
+              <div className="news-image">
+                {imageUrl && (
+                  <img src={imageUrl} alt="Uploaded" className="img-fluid" />
+                )}
+              </div>
+              <Form.Group className="mb-3">
+                <Form.Label className="input-labels">Add News Title</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter news title here..."
+                  value={newsTitle}
+                  onChange={handleNewsTitleChange}
+                  className="input-fields"
+                  required
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" as={Col} md="3">
+                <Form.Label className="input-labels">Add News Month</Form.Label>
+                <Form.Control
+                  type="month"
+                  value={newsDate}
+                  onChange={handleNewsDateChange}
+                  className="input-fields"
+                  min="2023-08"
+                  max="3000-08"
+                  required
+                />
+              </Form.Group>
+              <Form.Group className="mb-3">
+                <Form.Label className="input-labels">
+                  Add News Description
+                </Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={10}
+                  className="input-fields"
+                  placeholder="Enter the news description here..."
+                  value={newsDescription}
+                  onChange={handleNewsDescriptionChange}
+                  required
+                />
+              </Form.Group>
+            </Form>
+            <div className="save-news-btn d-flex justify-content-center align-items-center mt-4">
+              <Button
+                className="image-select-delete-btn"
+                onClick={handleSaveNews}
+              >
+                <span>Save News</span>
+                <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
+              </Button>
             </div>
-            <Form.Group className="mb-3">
-              <Form.Label className="input-labels">Add News Title</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Enter news title here..."
-                value={newsTitle}
-                onChange={handleNewsTitleChange}
-                className="input-fields"
-                required
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" as={Col} md="3">
-              <Form.Label className="input-labels">Add News Month</Form.Label>
-              <Form.Control
-                type="month"
-                value={newsDate}
-                onChange={handleNewsDateChange}
-                className="input-fields"
-                min="2023-08"
-                max="3000-08"
-                required
-              />
-            </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label className="input-labels">
-                Add News Description
-              </Form.Label>
-              <Form.Control
-                as="textarea"
-                rows={10}
-                className="input-fields"
-                placeholder="Enter the news description here..."
-                value={newsDescription}
-                onChange={handleNewsDescriptionChange}
-                required
-              />
-            </Form.Group>
-          </Form>
-          <div className="save-news-btn d-flex justify-content-center align-items-center">
-            <Button
-              className="image-select-delete-btn"
-              onClick={handleSaveNews}
-            >
-              <span>Save News</span>
-              <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
-            </Button>
           </div>
         </div>
       </section>
