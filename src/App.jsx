@@ -41,13 +41,13 @@ function App() {
 
   // Function to conditionally render Header based on route
   const renderHeader = () => {
-    if (window.location.pathname === "/") {
+    if (window.location.pathname === "/Login") {
       return null; // Don't render Header for the login page
     }
     return <Header />;
   };
   const renderFooter = () => {
-    if (window.location.pathname === "/") {
+    if (window.location.pathname === "/Login") {
       return null; // Don't render Footer for the login page
     }
     return <Footer />;
@@ -58,8 +58,8 @@ function App() {
       <Scrolltop />
       {renderHeader()}
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/Home" element={<Home />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/" element={<Home />} />
         <Route path="/Departments" element={<Departments />} />
         <Route path="/Facilities" element={<Facilities />} />
         <Route path="/Careers" element={<Careers />} />
