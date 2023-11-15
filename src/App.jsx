@@ -18,7 +18,7 @@ import Footer from "./assets/components/Footer";
 import NewDepartmentAdder from "./assets/components/NewDepartmentAdder";
 import NewDoctorAdder from "./assets/components/NewDoctorAdder";
 import NewNewsItemAdder from "./assets/components/NewNewsItemAdder";
-import CarouselImageUploader from "./assets/components/CarouselImageUploader";
+import NewCarouselImageUploader from "./assets/components/NewCarouselImageUploader";
 import NewFacilityAdder from "./assets/components/NewFacilityAdder";
 import NewCareerAdder from "./assets/components/NewCareerAdder";
 import NewGalleryAlbumAdder from "./assets/components/NewGalleryAlbumAdder";
@@ -63,7 +63,7 @@ function App() {
         <Route path="/Departments" element={<Departments />} />
         <Route path="/Facilities" element={<Facilities />} />
         <Route path="/Careers" element={<Careers />} />
-        <Route path="/Contact" element={<Contact />} />
+        {/* <Route path="/Contact" element={<Contact />} /> */}
         <Route path="/Doctors" element={<Doctors />} />
         <Route path="/Gallery" element={<Gallery />} />
         <Route path="/Governing-Board" element={<GoverningBoard />} />
@@ -71,7 +71,10 @@ function App() {
         <Route path="/NewDepartment" element={<NewDepartmentAdder />} />
         <Route path="/NewDoctor" element={<NewDoctorAdder />} />
         <Route path="/NewNews" element={<NewNewsItemAdder />} />
-        <Route path="/NewCarouselImage" element={<CarouselImageUploader />} />
+        <Route
+          path="/NewCarouselImage"
+          element={<NewCarouselImageUploader />}
+        />
         <Route path="/NewFacility" element={<NewFacilityAdder />} />
         <Route path="/NewCareer" element={<NewCareerAdder />} />
         <Route path="/NewGalleryAlbum" element={<NewGalleryAlbumAdder />} />
