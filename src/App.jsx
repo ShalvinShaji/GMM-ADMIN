@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Scrolltop from "./assets/components/Scrolltop";
@@ -11,6 +11,7 @@ import Careers from "./assets/pages/Careers";
 import Contact from "./assets/pages/Contact";
 import Doctors from "./assets/pages/Doctors";
 import Gallery from "./assets/pages/Gallery";
+import Login from "./assets/pages/Login";
 import GoverningBoard from "./assets/pages/GoverningBoard";
 import RecentNews from "./assets/pages/RecentNews";
 import Footer from "./assets/components/Footer";
@@ -36,12 +37,29 @@ import "./assets/css/Header.css";
 import "./assets/css/GoverningBoard.css";
 
 function App() {
+  const navigate = useNavigate();
+
+  // Function to conditionally render Header based on route
+  const renderHeader = () => {
+    if (window.location.pathname === "/") {
+      return null; // Don't render Header for the login page
+    }
+    return <Header />;
+  };
+  const renderFooter = () => {
+    if (window.location.pathname === "/") {
+      return null; // Don't render Footer for the login page
+    }
+    return <Footer />;
+  };
+
   return (
     <>
       <Scrolltop />
-      <Header />
+      {renderHeader()}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/Home" element={<Home />} />
         <Route path="/Departments" element={<Departments />} />
         <Route path="/Facilities" element={<Facilities />} />
         <Route path="/Careers" element={<Careers />} />
@@ -62,7 +80,7 @@ function App() {
           element={<NewGoverningBoardAdder />}
         />
       </Routes>
-      <Footer />
+      {renderFooter()}
     </>
   );
 }

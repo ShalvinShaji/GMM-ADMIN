@@ -17,11 +17,27 @@ const RecentNewsViewer = () => {
       title: "1 Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       image: "https://images.hdqwalls.com/wallpapers/hellsweeper-vr-sy.jpg",
       shortDesc:
-        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit nisi consequatur eligendi est doloribus! Adipisci natus quibusdam a doloremque?",
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit nisi consequatur eligendi est doloribus! Adipisci natus quibusdam a doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit nisi consequatur eligendi est doloribus! Adipisci natus quibusdam a doloremque?",
       date: "August 2023",
     },
     {
       id: 2,
+      title: "2 Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      image: "https://images.hdqwalls.com/wallpapers/hellsweeper-vr-sy.jpg",
+      shortDesc:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit nisi consequatur eligendi est doloribus! Adipisci natus quibusdam a doloremque?",
+      date: "August 2023",
+    },
+    {
+      id: 3,
+      title: "1 Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      image: "https://images.hdqwalls.com/wallpapers/hellsweeper-vr-sy.jpg",
+      shortDesc:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit nisi consequatur eligendi est doloribus! Adipisci natus quibusdam a doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit nisi consequatur eligendi est doloribus! Adipisci natus quibusdam a doloremque?",
+      date: "August 2023",
+    },
+    {
+      id: 4,
       title: "2 Lorem ipsum dolor sit amet consectetur adipisicing elit",
       image: "https://images.hdqwalls.com/wallpapers/hellsweeper-vr-sy.jpg",
       shortDesc:

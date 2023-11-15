@@ -25,7 +25,7 @@ export default function Header() {
         }`}
       >
         <div className="d-flex align-items-center justify-content-between">
-          <Link to="/" className="logo d-flex align-items-center ">
+          <Link to="/Home" className="logo d-flex align-items-center ">
             <img
               src="https://heeranew.netlify.app/assets/img/logo.jpg"
               alt=""
@@ -59,19 +59,6 @@ export default function Header() {
               </a>
 
               <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-                <li>
-                  <a
-                    className="dropdown-item d-flex align-items-center"
-                    href="users-profile.html"
-                  >
-                    <i className="bx bxs-cog"></i>
-                    <span>Account Settings</span>
-                  </a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-
                 <li>
                   <a
                     className="dropdown-item d-flex align-items-center"

@@ -1,0 +1,35 @@
+.login-page .username-password-field {
+  width: 340px !important;
+}
+
+.login-page {
+  background: hsla(197, 14%, 57%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(197, 14%, 57%, 1) 0%,
+    hsla(192, 17%, 94%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(197, 14%, 57%, 1) 0%,
+    hsla(192, 17%, 94%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(197, 14%, 57%, 1) 0%,
+    hsla(192, 17%, 94%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#8399A2", endColorstr="#EEF2F3", GradientType=1 );
+}
+
+.login-area {
+  box-shadow: rgba(230, 229, 229, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.login-page img {
+  border-radius: 25px !important;
+}
