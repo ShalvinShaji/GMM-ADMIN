@@ -25,7 +25,7 @@ export default function Header() {
         }`}
       >
         <div className="d-flex align-items-center justify-content-between">
-          <Link to="/Home" className="logo d-flex align-items-center ">
+          <Link to="/" className="logo d-flex align-items-center ">
             <img
               src="https://heeranew.netlify.app/assets/img/logo.jpg"
               alt=""
