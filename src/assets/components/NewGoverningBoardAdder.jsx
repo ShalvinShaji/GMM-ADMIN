@@ -87,6 +87,155 @@ const GoverningBoardViewer = () => {
     setShowPopup(false);
   };
 
+  function newGoverningBoardData() {
+    return (
+      <div className="row g-3">
+        <div className="col-md-4 governing-board-fields">
+          <div className="patron">
+            <Form>
+              <Form.Group className="mb-3">
+                <Form.Label className="input-labels">
+                  Add patron name
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter patron name here..."
+                  value={patronName}
+                  onChange={handlepatronNameChange}
+                  className="input-fields"
+                  required
+                />
+              </Form.Group>
+            </Form>
+          </div>
+        </div>
+        <div className="col-md-4 governing-board-fields">
+          <div className="president">
+            <Form>
+              <Form.Group className="mb-3">
+                <Form.Label className="input-labels">
+                  Add president name
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter president name here..."
+                  value={presidentName}
+                  onChange={handlePresidentNameChange}
+                  className="input-fields"
+                  required
+                />
+              </Form.Group>
+            </Form>
+          </div>
+        </div>
+        <div className="col-md-4 governing-board-fields">
+          <div className="secretary">
+            <Form>
+              <Form.Group className="mb-3">
+                <Form.Label className="input-labels">
+                  Add secretary name
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter secretary name here..."
+                  value={secretaryName}
+                  onChange={handleSecretaryNameChange}
+                  className="input-fields"
+                  required
+                />
+              </Form.Group>
+            </Form>
+          </div>
+        </div>
+        <div className="col-md-4 governing-board-fields">
+          <div className="joint-secretary">
+            <Form>
+              <Form.Group className="mb-3">
+                <Form.Label className="input-labels">
+                  Add joint secretary name
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter joint secretary name here..."
+                  value={jointSecretaryName}
+                  onChange={handleJointSecretaryNameChange}
+                  className="input-fields"
+                  required
+                />
+              </Form.Group>
+            </Form>
+          </div>
+        </div>
+        <div className="col-md-4 governing-board-fields">
+          <div className="Treasurer">
+            <Form>
+              <Form.Group className="mb-3">
+                <Form.Label className="input-labels">
+                  Add treasurer name
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter treasurer name here..."
+                  value={treasurerName}
+                  onChange={handleTreasurerNameChange}
+                  className="input-fields"
+                  required
+                />
+              </Form.Group>
+            </Form>
+          </div>
+        </div>
+        <div className="col-md-4 governing-board-fields">
+          <div className="Hon-Administrator">
+            <Form>
+              <Form.Group className="mb-3">
+                <Form.Label className="input-labels">
+                  Add Hon. Administrator name
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter Hon. Administrator name here..."
+                  value={administratorName}
+                  onChange={handleAdministratorNameChange}
+                  className="input-fields"
+                  required
+                />
+              </Form.Group>
+            </Form>
+          </div>
+        </div>
+        <div className="col-md-4 governing-board-fields">
+          <div className="Chief-Medical-Officer">
+            <Form>
+              <Form.Group className="mb-3">
+                <Form.Label className="input-labels">
+                  Add Chief Medical Officer name
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter chief medical officer name here..."
+                  value={chiefMedicalOfficerName}
+                  onChange={handleChiefMedicalOfficerNameChange}
+                  className="input-fields"
+                  required
+                />
+              </Form.Group>
+            </Form>
+          </div>
+        </div>
+        <div className="save-governing-board d-flex justify-content-center align-items-center col-12">
+          <Button
+            onClick={saveGoverningBoard}
+            className="image-select-delete-btn  mb-2"
+          >
+            <span>Save Changes</span>
+            <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
+          </Button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <>
       <section>
@@ -105,152 +254,7 @@ const GoverningBoardViewer = () => {
               </Link>
             </div>
           </div>
-          <div className="data-adder">
-            <div className="row g-3">
-              <div className="col-md-4 governing-board-fields">
-                <div className="patron">
-                  <Form>
-                    <Form.Group className="mb-3">
-                      <Form.Label className="input-labels">
-                        Add patron name
-                      </Form.Label>
-                      <Form.Control
-                        type="text"
-                        placeholder="Enter patron name here..."
-                        value={patronName}
-                        onChange={handlepatronNameChange}
-                        className="input-fields"
-                        required
-                      />
-                    </Form.Group>
-                  </Form>
-                </div>
-              </div>
-              <div className="col-md-4 governing-board-fields">
-                <div className="president">
-                  <Form>
-                    <Form.Group className="mb-3">
-                      <Form.Label className="input-labels">
-                        Add president name
-                      </Form.Label>
-                      <Form.Control
-                        type="text"
-                        placeholder="Enter president name here..."
-                        value={presidentName}
-                        onChange={handlePresidentNameChange}
-                        className="input-fields"
-                        required
-                      />
-                    </Form.Group>
-                  </Form>
-                </div>
-              </div>
-              <div className="col-md-4 governing-board-fields">
-                <div className="secretary">
-                  <Form>
-                    <Form.Group className="mb-3">
-                      <Form.Label className="input-labels">
-                        Add secretary name
-                      </Form.Label>
-                      <Form.Control
-                        type="text"
-                        placeholder="Enter secretary name here..."
-                        value={secretaryName}
-                        onChange={handleSecretaryNameChange}
-                        className="input-fields"
-                        required
-                      />
-                    </Form.Group>
-                  </Form>
-                </div>
-              </div>
-              <div className="col-md-4 governing-board-fields">
-                <div className="joint-secretary">
-                  <Form>
-                    <Form.Group className="mb-3">
-                      <Form.Label className="input-labels">
-                        Add joint secretary name
-                      </Form.Label>
-                      <Form.Control
-                        type="text"
-                        placeholder="Enter joint secretary name here..."
-                        value={jointSecretaryName}
-                        onChange={handleJointSecretaryNameChange}
-                        className="input-fields"
-                        required
-                      />
-                    </Form.Group>
-                  </Form>
-                </div>
-              </div>
-              <div className="col-md-4 governing-board-fields">
-                <div className="Treasurer">
-                  <Form>
-                    <Form.Group className="mb-3">
-                      <Form.Label className="input-labels">
-                        Add treasurer name
-                      </Form.Label>
-                      <Form.Control
-                        type="text"
-                        placeholder="Enter treasurer name here..."
-                        value={treasurerName}
-                        onChange={handleTreasurerNameChange}
-                        className="input-fields"
-                        required
-                      />
-                    </Form.Group>
-                  </Form>
-                </div>
-              </div>
-              <div className="col-md-4 governing-board-fields">
-                <div className="Hon-Administrator">
-                  <Form>
-                    <Form.Group className="mb-3">
-                      <Form.Label className="input-labels">
-                        Add Hon. Administrator name
-                      </Form.Label>
-                      <Form.Control
-                        type="text"
-                        placeholder="Enter Hon. Administrator name here..."
-                        value={administratorName}
-                        onChange={handleAdministratorNameChange}
-                        className="input-fields"
-                        required
-                      />
-                    </Form.Group>
-                  </Form>
-                </div>
-              </div>
-              <div className="col-md-4 governing-board-fields">
-                <div className="Chief-Medical-Officer">
-                  <Form>
-                    <Form.Group className="mb-3">
-                      <Form.Label className="input-labels">
-                        Add Chief Medical Officer name
-                      </Form.Label>
-                      <Form.Control
-                        type="text"
-                        placeholder="Enter chief medical officer name here..."
-                        value={chiefMedicalOfficerName}
-                        onChange={handleChiefMedicalOfficerNameChange}
-                        className="input-fields"
-                        required
-                      />
-                    </Form.Group>
-                  </Form>
-                </div>
-              </div>
-              <div className="save-governing-board d-flex justify-content-center align-items-center col-12">
-                <Button
-                  onClick={saveGoverningBoard}
-                  className="image-select-delete-btn  mb-2"
-                >
-                  <span>Save Changes</span>
-                  <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
-                </Button>
-              </div>
-            </div>
-          </div>
+          <div className="data-adder">{newGoverningBoardData()}</div>
         </div>
       </section>
       <CustomPopup

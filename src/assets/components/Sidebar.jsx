@@ -18,7 +18,7 @@ export default function Sidebar({ isOpen, closeSidebar }) {
       <aside id="sidebar" className={`sidebar ${isOpen ? "sidebar-open" : ""}`}>
         <ul className="sidebar-nav" id="sidebar-nav">
           <li className="nav-item">
-            <Link to="/Home" className=" nav-link" onClick={closeSidebar}>
+            <Link to="/" className=" nav-link" onClick={closeSidebar}>
               <FontAwesomeIcon icon={faDashboard} />
               <span>Dashboard</span>
             </Link>
