@@ -33,6 +33,7 @@ const CarouselImageUploader = () => {
 
   const handleConfirmUpload = () => {
     // Handle the actual upload logic here
+    // console.log("data", imageUrls);
     setShowPopup(false);
     setImageUrls([]);
   };
@@ -40,6 +41,53 @@ const CarouselImageUploader = () => {
   const handlePopupClose = () => {
     setShowPopup(false);
   };
+
+  function uploadCarouselImages() {
+    return (
+      <div className="file-input d-flex flex-column data-adder">
+        <Form>
+          <Form.Group className="">
+            <Form.Label className="input-labels">
+              Add Carousel Images
+            </Form.Label>
+            <Form.Control
+              ref={imageInput}
+              type="file"
+              className="image-input-selecter hidden"
+              onChange={handleFileChange}
+              multiple
+              required
+            />
+          </Form.Group>
+          <Button
+            onClick={() => imageInput.current.click()}
+            className="image-select-delete-btn  mb-3"
+          >
+            <span>Select Image</span>
+            <FontAwesomeIcon icon={faImage} className="ms-2" />
+          </Button>
+        </Form>
+        {imageUrls.map((imageUrl, index) => (
+          <img
+            key={index}
+            src={imageUrl}
+            alt={`Uploaded ${index + 1}`}
+            className="display-image img-fluid mb-3"
+          />
+        ))}
+
+        <div className="Image-select-upload-buttons d-flex justify-content-around align-items-center">
+          <Button
+            className="image-select-delete-btn mt-3 mb-3"
+            onClick={uploadImages}
+          >
+            <span>Upload Images</span>
+            <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
+          </Button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -54,48 +102,7 @@ const CarouselImageUploader = () => {
               </Button>
             </Link>
           </div>
-          <div className="file-input d-flex flex-column data-adder">
-            <Form>
-              <Form.Group className="">
-                <Form.Label className="input-labels">
-                  Add Carousel Images
-                </Form.Label>
-                <Form.Control
-                  ref={imageInput}
-                  type="file"
-                  className="image-input-selecter hidden"
-                  onChange={handleFileChange}
-                  multiple
-                  required
-                />
-              </Form.Group>
-              <Button
-                onClick={() => imageInput.current.click()}
-                className="image-select-delete-btn  mb-3"
-              >
-                <span>Select Image</span>
-                <FontAwesomeIcon icon={faImage} className="ms-2" />
-              </Button>
-            </Form>
-            {imageUrls.map((imageUrl, index) => (
-              <img
-                key={index}
-                src={imageUrl}
-                alt={`Uploaded ${index + 1}`}
-                className="display-image img-fluid mb-3"
-              />
-            ))}
-
-            <div className="Image-select-upload-buttons d-flex justify-content-around align-items-center">
-              <Button
-                className="image-select-delete-btn mt-3 mb-3"
-                onClick={uploadImages}
-              >
-                <span>Upload Images</span>
-                <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
-              </Button>
-            </div>
-          </div>
+          {uploadCarouselImages()}
         </div>
       </section>
 

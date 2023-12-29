@@ -7,28 +7,44 @@ import { Link } from "react-router-dom";
 import CustomPopup from "../components/CustomPopup";
 
 const Home = () => {
-  const [images, setImages] = useState([
+  const carouselImages = [
     {
       id: 1,
-      src: "https://images.hdqwalls.com/download/the-chronicles-of-john-wick-8s-1537x722.jpg",
+      src: {
+        small: "https://source.unsplash.com/random/800x600?medical=1",
+      },
     },
     {
       id: 2,
-      src: "https://images.hdqwalls.com/download/2022-the-batman-minimal-5k-1m-1544x724.jpg",
+      src: {
+        small: "https://source.unsplash.com/random/800x600?medical=2",
+      },
     },
     {
       id: 3,
-      src: "https://images.hdqwalls.com/download/the-batman-riddle-5k-js-1544x724.jpg",
+      src: {
+        small: "https://source.unsplash.com/random/800x600?medical=3",
+      },
     },
     {
       id: 4,
-      src: "https://images.hdqwalls.com/download/the-batman-riddle-5k-js-1544x724.jpg",
+      src: {
+        small: "https://source.unsplash.com/random/800x600?medical=4",
+      },
     },
     {
       id: 5,
-      src: "https://images.hdqwalls.com/download/the-batman-riddle-5k-js-1544x724.jpg",
+      src: {
+        small: "https://source.unsplash.com/random/800x600?medical=5",
+      },
     },
-  ]);
+    {
+      id: 6,
+      src: {
+        small: "https://source.unsplash.com/random/800x600?medical=6",
+      },
+    },
+  ];
 
   const [showPopup, setShowPopup] = useState(false);
 
@@ -39,10 +55,6 @@ const Home = () => {
   };
 
   const handleConfirmDelete = () => {
-    const updatedImages = images.filter(
-      (image) => image.id !== selectedImageId
-    );
-    setImages(updatedImages);
     console.log(`Image with id ${selectedImageId} deleted`);
     setShowPopup(false);
   };
@@ -50,6 +62,67 @@ const Home = () => {
   const handlePopupClose = () => {
     setShowPopup(false);
   };
+
+  function homeCarouselData() {
+    const carouselImages = [
+      {
+        id: 1,
+        src: {
+          small: "https://source.unsplash.com/random/800x600?medical=1",
+        },
+      },
+      {
+        id: 2,
+        src: {
+          small: "https://source.unsplash.com/random/800x600?medical=2",
+        },
+      },
+      {
+        id: 3,
+        src: {
+          small: "https://source.unsplash.com/random/800x600?medical=3",
+        },
+      },
+      {
+        id: 4,
+        src: {
+          small: "https://source.unsplash.com/random/800x600?medical=4",
+        },
+      },
+      {
+        id: 5,
+        src: {
+          small: "https://source.unsplash.com/random/800x600?medical=5",
+        },
+      },
+      {
+        id: 6,
+        src: {
+          small: "https://source.unsplash.com/random/800x600?medical=6",
+        },
+      },
+    ];
+
+    return (
+      <div className="row g-3 ">
+        {carouselImages.map((image) => (
+          <div
+            key={image.id}
+            className="col-md-6 col-xl-4 d-flex flex-column justify-content-center align-items-center"
+          >
+            <img src={image.src.small} alt="" className="img-fluid" />
+            <Button
+              onClick={() => handleDelete(image.id)}
+              className="image-select-delete-btn mt-3 mb-3"
+            >
+              <span>Delete Image</span>
+              <FontAwesomeIcon icon={faTrash} className="ms-2" />
+            </Button>
+          </div>
+        ))}
+      </div>
+    );
+  }
 
   return (
     <>
@@ -64,25 +137,7 @@ const Home = () => {
               </Button>
             </Link>
           </div>
-          <div className="carousel-image-box ">
-            <div className="row g-3 ">
-              {images.map((image) => (
-                <div
-                  key={image.id}
-                  className="col-md-6 col-xl-4 d-flex flex-column justify-content-center align-items-center"
-                >
-                  <img src={image.src} alt="" className="img-fluid" />
-                  <Button
-                    onClick={() => handleDelete(image.id)}
-                    className="image-select-delete-btn mt-3 mb-3"
-                  >
-                    <span>Delete Image</span>
-                    <FontAwesomeIcon icon={faTrash} className="ms-2" />
-                  </Button>
-                </div>
-              ))}
-            </div>
-          </div>
+          <div className="carousel-image-box ">{homeCarouselData()}</div>
         </div>
       </section>
 
