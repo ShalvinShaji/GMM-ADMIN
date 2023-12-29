@@ -7,45 +7,6 @@ import { Link } from "react-router-dom";
 import CustomPopup from "../components/CustomPopup";
 
 const Home = () => {
-  const carouselImages = [
-    {
-      id: 1,
-      src: {
-        small: "https://source.unsplash.com/random/800x600?medical=1",
-      },
-    },
-    {
-      id: 2,
-      src: {
-        small: "https://source.unsplash.com/random/800x600?medical=2",
-      },
-    },
-    {
-      id: 3,
-      src: {
-        small: "https://source.unsplash.com/random/800x600?medical=3",
-      },
-    },
-    {
-      id: 4,
-      src: {
-        small: "https://source.unsplash.com/random/800x600?medical=4",
-      },
-    },
-    {
-      id: 5,
-      src: {
-        small: "https://source.unsplash.com/random/800x600?medical=5",
-      },
-    },
-    {
-      id: 6,
-      src: {
-        small: "https://source.unsplash.com/random/800x600?medical=6",
-      },
-    },
-  ];
-
   const [showPopup, setShowPopup] = useState(false);
 
   const [selectedImageId, setSelectedImageId] = useState(null);

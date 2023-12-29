@@ -1,53 +1,12 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowRight,
-  faNewspaper,
-  faTrash,
-} from "@fortawesome/free-solid-svg-icons";
+import { faNewspaper, faTrash } from "@fortawesome/free-solid-svg-icons";
 import Sectionhead from "../components/Sectionhead";
 import { Link } from "react-router-dom";
 import CustomPopup from "../components/CustomPopup";
 
 const RecentNews = () => {
-  const initialNewsData = [
-    {
-      id: 1,
-      title: "1 Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      image: "https://images.hdqwalls.com/wallpapers/hellsweeper-vr-sy.jpg",
-      shortDesc:
-        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit nisi consequatur eligendi est doloribus! Adipisci natus quibusdam a doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit nisi consequatur eligendi est doloribus! Adipisci natus quibusdam a doloremque?",
-      date: "August 2023",
-    },
-    {
-      id: 2,
-      title: "2 Lorem ipsum dolor sit amet consectetur adipisicing elit",
-      image: "https://images.hdqwalls.com/wallpapers/hellsweeper-vr-sy.jpg",
-      shortDesc:
-        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit nisi consequatur eligendi est doloribus! Adipisci natus quibusdam a doloremque?",
-      date: "August 2023",
-    },
-    {
-      id: 3,
-      title: "1 Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      image: "https://images.hdqwalls.com/wallpapers/hellsweeper-vr-sy.jpg",
-      shortDesc:
-        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit nisi consequatur eligendi est doloribus! Adipisci natus quibusdam a doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit nisi consequatur eligendi est doloribus! Adipisci natus quibusdam a doloremque?",
-      date: "August 2023",
-    },
-    {
-      id: 4,
-      title: "2 Lorem ipsum dolor sit amet consectetur adipisicing elit",
-      image: "https://images.hdqwalls.com/wallpapers/hellsweeper-vr-sy.jpg",
-      shortDesc:
-        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit nisi consequatur eligendi est doloribus! Adipisci natus quibusdam a doloremque?",
-      date: "August 2023",
-    },
-    // Add more news items as needed
-  ];
-
-  const [newsData, setNewsData] = useState(initialNewsData);
   const [showPopup, setShowPopup] = useState(false);
   const [selectedNewsId, setSelectedNewsId] = useState(null);
 
@@ -57,14 +16,83 @@ const RecentNews = () => {
   };
 
   const handleConfirmDelete = () => {
-    const updatedNews = newsData.filter((News) => News.id !== selectedNewsId);
-    setNewsData(updatedNews);
+    console.log("deleted", selectedNewsId);
     setShowPopup(false);
   };
 
   const handlePopupClose = () => {
     setShowPopup(false);
   };
+
+  function recentNewsData() {
+    const initialNewsData = [
+      {
+        id: 1,
+        title: "1 Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        image: "https://images.hdqwalls.com/wallpapers/hellsweeper-vr-sy.jpg",
+        shortDesc:
+          " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit nisi consequatur eligendi est doloribus! Adipisci natus quibusdam a doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit nisi consequatur eligendi est doloribus! Adipisci natus quibusdam a doloremque?",
+        date: "August 2023",
+      },
+      {
+        id: 2,
+        title: "2 Lorem ipsum dolor sit amet consectetur adipisicing elit",
+        image: "https://images.hdqwalls.com/wallpapers/hellsweeper-vr-sy.jpg",
+        shortDesc:
+          " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit nisi consequatur eligendi est doloribus! Adipisci natus quibusdam a doloremque?",
+        date: "August 2023",
+      },
+      {
+        id: 3,
+        title: "1 Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        image: "https://images.hdqwalls.com/wallpapers/hellsweeper-vr-sy.jpg",
+        shortDesc:
+          " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit nisi consequatur eligendi est doloribus! Adipisci natus quibusdam a doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit nisi consequatur eligendi est doloribus! Adipisci natus quibusdam a doloremque?",
+        date: "August 2023",
+      },
+      {
+        id: 4,
+        title: "2 Lorem ipsum dolor sit amet consectetur adipisicing elit",
+        image: "https://images.hdqwalls.com/wallpapers/hellsweeper-vr-sy.jpg",
+        shortDesc:
+          " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit nisi consequatur eligendi est doloribus! Adipisci natus quibusdam a doloremque?",
+        date: "August 2023",
+      },
+      // Add more news items as needed
+    ];
+    return (
+      <div className="row g-2">
+        {initialNewsData.map((news) => (
+          <div key={news.id} className="col-xl-4 col-md-6  p-3">
+            <div className="post-box p-3">
+              <div className="post-img d-flex justify-content-center align-items-start">
+                <img src={news.image} alt="news-img" className="img-fluid" />
+              </div>
+              <div className="post-title mt-2">
+                <p className="">{news.title}</p>
+              </div>
+              <div className="m-0 news-post-short-desc">
+                <p>{news.shortDesc}</p>
+              </div>
+              <div className="news-details">
+                <p className="post-date text-start m-0 ">{news.date}</p>
+              </div>
+            </div>
+            <div className="post-delete d-flex justify-content-center align-items-center mt-2 mb-2">
+              <Button
+                variant="primary"
+                className="image-select-delete-btn"
+                onClick={() => handleDeleteNews(news.id)}
+              >
+                <span>Delete Post</span>
+                <FontAwesomeIcon icon={faTrash} className="ms-2" />
+              </Button>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
 
   return (
     <>
@@ -82,40 +110,7 @@ const RecentNews = () => {
               </Button>
             </Link>
           </div>
-          <div className="row g-2">
-            {newsData.map((news) => (
-              <div key={news.id} className="col-xl-4 col-md-6  p-3">
-                <div className="post-box p-3">
-                  <div className="post-img d-flex justify-content-center align-items-start">
-                    <img
-                      src={news.image}
-                      alt="news-img"
-                      className="img-fluid"
-                    />
-                  </div>
-                  <div className="post-title mt-2">
-                    <p className="">{news.title}</p>
-                  </div>
-                  <div className="m-0 news-post-short-desc">
-                    <p>{news.shortDesc}</p>
-                  </div>
-                  <div className="news-details">
-                    <p className="post-date text-start m-0 ">{news.date}</p>
-                  </div>
-                </div>
-                <div className="post-delete d-flex justify-content-center align-items-center mt-2 mb-2">
-                  <Button
-                    variant="primary"
-                    className="image-select-delete-btn"
-                    onClick={() => handleDeleteNews(news.id)}
-                  >
-                    <span>Delete Post</span>
-                    <FontAwesomeIcon icon={faTrash} className="ms-2" />
-                  </Button>
-                </div>
-              </div>
-            ))}
-          </div>
+          {recentNewsData()}
         </div>
       </section>
       <CustomPopup
