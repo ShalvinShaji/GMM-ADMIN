@@ -1,9 +1,9 @@
 import React from "react";
 
 const Footer = () => {
-  const openCredit = () => {
-    window.open("https://gmmreact.netlify.app", "_blank");
-  };
+  // const openCredit = () => {
+  //   window.open("https://gmmreact.netlify.app", "_blank");
+  // };
 
   return (
     <>
@@ -17,7 +17,8 @@ const Footer = () => {
           . All Rights Reserved
         </div>
         <div className="credits">
-          Designed by <a onClick={openCredit}>AZAIC TECH LLP</a>
+          {/* Designed by <a onClick={openCredit}>AZAIC TECH LLP</a> */}
+          Designed by <a href="#">AZAIC TECH LLP</a>
         </div>
       </footer>
     </>
