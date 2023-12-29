@@ -37,26 +37,27 @@ import "./assets/css/Header.css";
 import "./assets/css/GoverningBoard.css";
 
 function App() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // Function to conditionally render Header based on route
-  const renderHeader = () => {
-    if (window.location.pathname === "/Login") {
-      return null; // Don't render Header for the login page
-    }
-    return <Header />;
-  };
-  const renderFooter = () => {
-    if (window.location.pathname === "/Login") {
-      return null; // Don't render Footer for the login page
-    }
-    return <Footer />;
-  };
+  // const renderHeader = () => {
+  //   if (window.location.pathname === "/Login") {
+  //     return null;
+  //   }
+  //   return <Header />;
+  // };
+  // const renderFooter = () => {
+  //   if (window.location.pathname === "/Login") {
+  //     return null;
+  //   }
+  //   return <Footer />;
+  // };
 
   return (
     <>
       <Scrolltop />
-      {renderHeader()}
+      {/* {renderHeader()} */}
+      <Header />
       <Routes>
         <Route path="/Login" element={<Login />} />
         <Route path="/" element={<Home />} />
@@ -83,7 +84,8 @@ function App() {
           element={<NewGoverningBoardAdder />}
         />
       </Routes>
-      {renderFooter()}
+      {/* {renderFooter()} */}
+      <Footer />
     </>
   );
 }

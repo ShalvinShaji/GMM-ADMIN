@@ -9,7 +9,6 @@ import {
   Button,
 } from "react-bootstrap";
 import "../css/Login.css";
-import Footer from "../components/Footer";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -93,7 +92,6 @@ const Login = () => {
           </Row>
         </Container>
       </section>
-      <Footer className="w-100 " />
     </div>
   );
 };
