@@ -8,7 +8,7 @@ import CustomPopup from "../components/CustomPopup";
 
 const Facilities = () => {
   const [showDeletePopup, setshowDeletePopup] = useState(false);
-  // const [selectedFacilityID, setSelectedFacilityID] = useState("");
+  const [selectedFacilityID, setSelectedFacilityID] = useState("");
 
   const handleDeleteFacility = (id) => {
     setSelectedFacilityID(id);
@@ -16,7 +16,7 @@ const Facilities = () => {
   };
 
   const handleConfirmDeleteDepartment = () => {
-    // console.log("deleted", selectedFacilityID);
+    console.log("deleted", selectedFacilityID);
     setshowDeletePopup(false);
   };
 

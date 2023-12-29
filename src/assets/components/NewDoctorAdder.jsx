@@ -51,11 +51,6 @@ const NewDoctorItemAdder = () => {
   const handleDoctorOpTime = (e) => {
     setDoctorOptime(e.target.value);
   };
-  const departmentsList = [
-    { id: "1", name: "Genaral medicine" },
-    { id: "2", name: "Cardiology" },
-    { id: "3", name: "Home care and palliative care" },
-  ];
 
   const handleSaveDoctor = () => {
     if (
@@ -83,6 +78,8 @@ const NewDoctorItemAdder = () => {
       imageUrl: imageUrl,
     };
 
+    console.log("new doctor data", newDoctor);
+
     // Reset the state values to null
     setDoctorName("");
     setselectedDepartment("option1");
@@ -98,6 +95,183 @@ const NewDoctorItemAdder = () => {
   const handleSavePopupClose = () => {
     setShowSavePopup(false);
   };
+
+  function newDoctorData() {
+    const departmentsList = [
+      {
+        id: 1,
+        departmentId: "general-medicine",
+        name: "General Medicine",
+        bannerImage:
+          "https://gmmhospital.in/assets/img/carousel-images/carousel-bg-1.jpg",
+        description:
+          "The department of general medicine deals with the prevention, diagnosis, and treatment of adult diseases. With experienced doctors in the field, the department provides the best possible primary care.",
+      },
+      {
+        id: 2,
+        departmentId: "cardiology",
+        name: "Cardiology",
+        bannerImage:
+          "https://gmmhospital.in/assets/img/carousel-images/carousel-bg-1.jpg",
+        description:
+          "The department of cardiology diagnoses and provides treatment for disorders related to the heart and cardiovascular system. We provide OPD based care for our patients.",
+      },
+      {
+        id: 3,
+        departmentId: "pediatrics",
+        name: "Pediatrics",
+        bannerImage:
+          "https://gmmhospital.in/assets/img/carousel-images/carousel-bg-1.jpg",
+        description:
+          "The department provides medical care to infants, children, adolescents, and young adults. We provide outpatient services as well as inpatient service which includes assessments and vaccinations.",
+      },
+      {
+        id: 4,
+        departmentId: "orthopedics",
+        name: "Orthopedics",
+        bannerImage:
+          "https://gmmhospital.in/assets/img/carousel-images/carousel-bg-1.jpg",
+        description:
+          "Provide medical care for issues related to the musculoskeletal system and treating injuries to bones, joints, ligaments, or tendons. We also have a well-equipped physiotherapy unit.",
+      },
+      {
+        id: 5,
+        departmentId: "nephrology",
+        name: "Nephrology",
+        bannerImage:
+          "https://gmmhospital.in/assets/img/carousel-images/carousel-bg-1.jpg",
+        description:
+          "Provides OPD based medical care for diseases related to the kidney. We also have a dialysis unit providing treatment for kidney failure. ",
+      },
+      {
+        id: 6,
+        departmentId: "emergency-medicine",
+        name: "Emergency Medicine",
+        bannerImage:
+          "https://gmmhospital.in/assets/img/carousel-images/carousel-bg-1.jpg",
+        description:
+          "We provide 24*7 emergency care to patients who need immediate care.",
+      },
+    ];
+
+    return (
+      <div className="row ">
+        <div className="col-lg-2">
+          <div className="Doctor-image">
+            {imageUrl && (
+              <img src={imageUrl} alt="Uploaded" className="img-fluid" />
+            )}
+          </div>
+          <Button
+            onClick={() => imageInput.current.click()}
+            className="image-select-delete-btn mt-3 mb-4"
+          >
+            <span>Select Doctor Image</span>
+            <FontAwesomeIcon icon={faImage} className="ms-2" />
+          </Button>
+        </div>
+        <div className="col-lg-5">
+          <Form>
+            <Form.Group>
+              <Form.Control
+                ref={imageInput}
+                type="file"
+                className="image-input-selecter"
+                onChange={handleFileChange}
+                required
+              />
+            </Form.Group>
+            <Form.Group className="mb-4">
+              <Form.Label className="input-labels">Add Doctor Name</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter Doctor Name here..."
+                value={DoctorName}
+                onChange={handleDoctorNameChange}
+                className="input-fields"
+                required
+              />
+            </Form.Group>
+            <Form.Group className="mb-4">
+              <Form.Label className="input-labels">
+                Select Doctor Department
+              </Form.Label>
+              <div>
+                <select
+                  value={selectedDepartment}
+                  onChange={handleDepartmentChange}
+                  style={{
+                    width: "300px",
+                    height: "30px",
+                    border: "1px soild black",
+                    borderRadius: "5px",
+                    outline: "none",
+                  }}
+                >
+                  <option value="Select department">Select department</option>
+                  {departmentsList.map((department) => (
+                    <option key={department.id} value={department.name}>
+                      {department.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </Form.Group>
+            <Form.Group className="mb-4">
+              <Form.Label className="input-labels">
+                Add Doctor Qualification
+              </Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter Doctor Qualification here..."
+                value={DoctorQualification}
+                onChange={handleDoctorQualification}
+                className="input-fields"
+                required
+              />
+            </Form.Group>
+          </Form>
+        </div>
+        <div className="col-lg-5">
+          <Form>
+            <Form.Group className="mb-4">
+              <Form.Label className="input-labels">Add Doctor Role</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter Doctor Role Name here..."
+                value={DoctorRole}
+                onChange={handleDoctorRole}
+                className="input-fields"
+                required
+              />
+            </Form.Group>
+            <Form.Group className="mb-4">
+              <Form.Label className="input-labels">
+                Add Doctor OP time
+              </Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter Doctor op time here like Monday-Friday 9AM-5PM"
+                value={DoctorOpTime}
+                onChange={handleDoctorOpTime}
+                className="input-fields"
+                required
+              />
+            </Form.Group>
+          </Form>
+        </div>
+        <div className="save-Doctor-btn d-flex justify-content-center align-items-center">
+          <Button
+            className="image-select-delete-btn"
+            onClick={handleSaveDoctor}
+          >
+            <span>Save Doctor</span>
+            <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
+          </Button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -115,129 +289,7 @@ const NewDoctorItemAdder = () => {
               </Button>
             </Link>
           </div>
-          <div className="data-adder">
-            <div className="row ">
-              <div className="col-lg-2">
-                <div className="Doctor-image">
-                  {imageUrl && (
-                    <img src={imageUrl} alt="Uploaded" className="img-fluid" />
-                  )}
-                </div>
-                <Button
-                  onClick={() => imageInput.current.click()}
-                  className="image-select-delete-btn mt-3 mb-4"
-                >
-                  <span>Select Doctor Image</span>
-                  <FontAwesomeIcon icon={faImage} className="ms-2" />
-                </Button>
-              </div>
-              <div className="col-lg-5">
-                <Form>
-                  <Form.Group>
-                    <Form.Control
-                      ref={imageInput}
-                      type="file"
-                      className="image-input-selecter"
-                      onChange={handleFileChange}
-                      required
-                    />
-                  </Form.Group>
-                  <Form.Group className="mb-4">
-                    <Form.Label className="input-labels">
-                      Add Doctor Name
-                    </Form.Label>
-                    <Form.Control
-                      type="text"
-                      placeholder="Enter Doctor Name here..."
-                      value={DoctorName}
-                      onChange={handleDoctorNameChange}
-                      className="input-fields"
-                      required
-                    />
-                  </Form.Group>
-                  <Form.Group className="mb-4">
-                    <Form.Label className="input-labels">
-                      Select Doctor Department
-                    </Form.Label>
-                    <div>
-                      <select
-                        value={selectedDepartment}
-                        onChange={handleDepartmentChange}
-                        style={{
-                          width: "300px",
-                          height: "30px",
-                          border: "1px soild black",
-                          borderRadius: "5px",
-                          outline: "none",
-                        }}
-                      >
-                        <option value="Select department">
-                          Select department
-                        </option>
-                        {departmentsList.map((department) => (
-                          <option key={department.id} value={department.id}>
-                            {department.name}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                  </Form.Group>
-                  <Form.Group className="mb-4">
-                    <Form.Label className="input-labels">
-                      Add Doctor Qualification
-                    </Form.Label>
-                    <Form.Control
-                      type="text"
-                      placeholder="Enter Doctor Qualification here..."
-                      value={DoctorQualification}
-                      onChange={handleDoctorQualification}
-                      className="input-fields"
-                      required
-                    />
-                  </Form.Group>
-                </Form>
-              </div>
-              <div className="col-lg-5">
-                <Form>
-                  <Form.Group className="mb-4">
-                    <Form.Label className="input-labels">
-                      Add Doctor Role
-                    </Form.Label>
-                    <Form.Control
-                      type="text"
-                      placeholder="Enter Doctor Role Name here..."
-                      value={DoctorRole}
-                      onChange={handleDoctorRole}
-                      className="input-fields"
-                      required
-                    />
-                  </Form.Group>
-                  <Form.Group className="mb-4">
-                    <Form.Label className="input-labels">
-                      Add Doctor OP time
-                    </Form.Label>
-                    <Form.Control
-                      type="text"
-                      placeholder="Enter Doctor op time here like Monday-Friday 9AM-5PM"
-                      value={DoctorOpTime}
-                      onChange={handleDoctorOpTime}
-                      className="input-fields"
-                      required
-                    />
-                  </Form.Group>
-                </Form>
-              </div>
-              <div className="save-Doctor-btn d-flex justify-content-center align-items-center">
-                <Button
-                  className="image-select-delete-btn"
-                  onClick={handleSaveDoctor}
-                >
-                  <span>Save Doctor</span>
-                  <FontAwesomeIcon icon={faCloudArrowUp} className="ms-2" />
-                </Button>
-              </div>
-            </div>
-          </div>
+          <div className="data-adder">{newDoctorData()}</div>
         </div>
       </section>
       <CustomPopup
